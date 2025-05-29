@@ -1,0 +1,18 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include requirements.txt
+include *.txt
+include *.md
+include *.yml
+include *.yaml
+recursive-include docs *
+recursive-include koboapi *.py
+recursive-include koboapi *.json
+recursive-include koboapi *.txt
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.orig
+recursive-exclude * *.rej
+recursive-exclude * *~
+recursive-exclude * .DS_Store
