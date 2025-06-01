@@ -36,4 +36,4 @@ all: install
 test:
 	echo "🧪 Ejecutando smoke tests..."
 	. ./venv/bin/activate
-	python tests/smoke.py
+	python tests/url.py

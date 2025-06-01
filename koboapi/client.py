@@ -5,7 +5,7 @@ import time
 from typing import Dict, Any, Optional
 from urllib.parse import urljoin
 
-class HTTPClient:
+class Client:
     """HTTP client for making requests to Kobo API."""
 
     def __init__(self, token: str, base_url: str, debug: bool = False, timeout: int = 30):
@@ -50,3 +50,36 @@ class HTTPClient:
                 time.sleep(2 ** attempt)  # Exponential backoff
 
         raise Exception("Unexpected error in request handling")
+
+    def download_file(self, url: str, filepath: str, retries: int = 3) -> None:
+        """Download a file from the given URL."""
+        if self.debug:
+            print(f"Downloading file from: {url}")
+            print(f"Saving to: {filepath}")
+
+        for attempt in range(retries):
+            try:
+                response = self.session.get(url, timeout=self.timeout, stream=True)
+
+                if response.status_code == 401:
+                    raise Exception("Invalid token or unauthorized access")
+                elif response.status_code == 404:
+                    raise Exception(f"File not found: {url}")
+                elif not response.ok:
+                    raise Exception(f"Download failed with status {response.status_code}: {response.text}")
+
+                with open(filepath, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        if chunk:
+                            f.write(chunk)
+
+                if self.debug:
+                    print(f"File downloaded successfully: {filepath}")
+                return
+
+            except requests.exceptions.RequestException as e:
+                if attempt == retries - 1:
+                    raise Exception(f"Download failed after {retries} attempts: {str(e)}")
+                time.sleep(2 ** attempt)  # Exponential backoff
+
+        raise Exception("Unexpected error in file download")

@@ -1,7 +1,8 @@
 """Main wrapper for KoboAPI interactions."""
 
+import os
 from typing import Any, Dict, List, Optional
-from .http_client import HTTPClient
+from .client import Client
 
 class Kobo:
     """Extracts collected data from KoBoToolbox with improved architecture."""
@@ -29,7 +30,7 @@ class Kobo:
         else:
             resolved_endpoint = endpoint
 
-        self.client = HTTPClient(token, resolved_endpoint, debug)
+        self.client = Client(token, resolved_endpoint, debug)
         self.debug = debug
 
     def list_assets(self) -> List[Dict[str, Any]]:
@@ -83,7 +84,9 @@ class Kobo:
             label = choice_data.get('label', [''])[0] if 'label' in choice_data else choice_data['name']
 
             choice_lists[list_name][choice_data['name']] = {
+                'name': choice_data['name'],
                 'label': label,
+                'list_name': list_name,
                 'sequence': sequence
             }
             sequence += 1
@@ -152,3 +155,47 @@ class Kobo:
                     sequence = next_sequence
 
         return root_group
+
+    def download_xlsform(self, asset_uid: str, download_dir: str = "src") -> str:
+        """Download the XLS form for a given asset.
+
+        Args:
+            asset_uid: The UID of the asset to download
+            download_dir: Directory to save the file (default: "src")
+
+        Returns:
+            str: Path to the downloaded file
+
+        Raises:
+            Exception: If XLS format is not available or download fails
+        """
+        # Get asset information
+        asset = self.get_asset(asset_uid)
+
+        # Find XLS download URL
+        downloads = asset.get('downloads', [])
+        xls_url = None
+
+        for download in downloads:
+            if download.get('format') == 'xls':
+                xls_url = download.get('url')
+                break
+
+        if not xls_url:
+            raise Exception(f"XLS format not available for asset {asset_uid}")
+
+        # Create downloads directory if it doesn't exist
+        os.makedirs(download_dir, exist_ok=True)
+
+        # Generate filename using asset name
+        asset_name = asset.get('name', asset_uid)
+        # Clean filename to be filesystem-safe
+        safe_name = "".join(c for c in asset_name if c.isalnum() or c in (' ', '-', '_')).rstrip()
+        safe_name = safe_name.replace(' ', '_') if safe_name else asset_uid
+        filename = f"xlsform_{safe_name}.xlsx"
+        filepath = os.path.join(download_dir, filename)
+
+        # Download the file
+        self.client.download_file(xls_url, filepath)
+
+        return filepath
