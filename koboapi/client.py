@@ -1,85 +1,110 @@
-"""HTTP client for KoboAPI requests."""
+"""Optimized HTTP client for KoboAPI requests."""
 
 import requests
 import time
 from typing import Dict, Any, Optional
 from urllib.parse import urljoin
+from .exceptions import AuthenticationError, ResourceNotFoundError, KoboAPIError
 
 class Client:
-    """HTTP client for making requests to Kobo API."""
+    """
+    Optimized HTTP client with better error handling and configuration.
+    """
 
-    def __init__(self, token: str, base_url: str, debug: bool = False, timeout: int = 30):
+    # Status code mappings
+    ERROR_MAPPING = {
+        401: AuthenticationError,
+        404: ResourceNotFoundError,
+    }
+
+    def __init__(
+            self, token: str, base_url: str, debug: bool = False,
+            timeout: int = 30, max_retries: int = 3
+            ):
         self.token = token
         self.base_url = base_url.rstrip('/')
         self.debug = debug
         self.timeout = timeout
-        self.session = requests.Session()
-        self.session.headers.update({'Authorization': f'Token {token}'})
+        self.max_retries = max_retries
+
+        self.session = self._create_session()
+
+    def _create_session(self) -> requests.Session:
+        """Create configured session with headers."""
+        session = requests.Session()
+        session.headers.update({
+            'Authorization': f'Token {self.token}',
+            'Content-Type': 'application/json',
+            'User-Agent': 'KoboAPI-Client/1.0'
+        })
+        return session
 
     def _build_url(self, endpoint: str) -> str:
-        """Build complete URL ensuring proper API version path."""
+        """Build complete URL with proper API versioning."""
         if '/api/v2' not in self.base_url and not endpoint.startswith('/api/v2'):
             endpoint = f'/api/v2{endpoint}' if not endpoint.startswith('/') else f'/api/v2{endpoint}'
         return urljoin(self.base_url, endpoint)
 
-    def get(self, endpoint: str, params: Optional[Dict[str, Any]] = None, retries: int = 3) -> Dict[str, Any]:
-        """Make GET request with error handling and retries."""
-        url = self._build_url(endpoint)
+    def get(self, endpoint: str, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Make GET request with improved error handling."""
+        return self._make_request('GET', endpoint, params=params)
 
-        if self.debug:
-            print(f"Making GET request to: {url}")
-            if params:
-                print(f"Parameters: {params}")
+    def download_file(self, url: str, filepath: str) -> None:
+        """Download file with streaming and proper error handling."""
+        self._log(f"Downloading: {url} -> {filepath}")
 
-        for attempt in range(retries):
+        response = self._make_request_raw('GET', url, stream=True)
+
+        with open(filepath, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+        self._log(f"Download completed: {filepath}")
+
+    def _make_request(self, method: str, endpoint: str,
+                     params: Optional[Dict] = None,
+                     **kwargs) -> Dict[str, Any]:
+        """Make HTTP request with retries and error handling."""
+        url = self._build_url(endpoint) if not endpoint.startswith('http') else endpoint
+
+        response = self._make_request_raw(method, url, params=params, **kwargs)
+
+        try:
+            return response.json()
+        except ValueError as e:
+            raise KoboAPIError(f"Invalid JSON response: {str(e)}")
+
+    def _make_request_raw(self, method: str, url: str, **kwargs) -> requests.Response:
+        """Make raw HTTP request with retries."""
+        self._log(f"{method} {url}")
+
+        for attempt in range(self.max_retries):
             try:
-                response = self.session.get(url, params=params, timeout=self.timeout)
-
-                if response.status_code == 401:
-                    raise Exception("Invalid token or unauthorized access")
-                elif response.status_code == 404:
-                    raise Exception(f"Resource not found: {url}")
-                elif not response.ok:
-                    raise Exception(f"API request failed with status {response.status_code}: {response.text}")
-
-                return response.json()
+                response = self.session.request(
+                    method, url, timeout=self.timeout, **kwargs
+                )
+                self._handle_response(response, url)
+                return response
 
             except requests.exceptions.RequestException as e:
-                if attempt == retries - 1:
-                    raise Exception(f"Request failed after {retries} attempts: {str(e)}")
+                if attempt == self.max_retries - 1:
+                    raise KoboAPIError(f"Request failed after {self.max_retries} attempts: {str(e)}")
                 time.sleep(2 ** attempt)  # Exponential backoff
 
-        raise Exception("Unexpected error in request handling")
+        raise KoboAPIError("Unexpected error in request handling")
 
-    def download_file(self, url: str, filepath: str, retries: int = 3) -> None:
-        """Download a file from the given URL."""
+    def _handle_response(self, response: requests.Response, url: str) -> None:
+        """Handle HTTP response with appropriate exceptions."""
+        if response.ok:
+            return
+
+        error_class = self.ERROR_MAPPING.get(response.status_code, KoboAPIError)
+        error_msg = f"Request to {url} failed ({response.status_code}): {response.text}"
+
+        raise error_class(error_msg)
+
+    def _log(self, message: str) -> None:
+        """Log debug messages if debugging is enabled."""
         if self.debug:
-            print(f"Downloading file from: {url}")
-            print(f"Saving to: {filepath}")
-
-        for attempt in range(retries):
-            try:
-                response = self.session.get(url, timeout=self.timeout, stream=True)
-
-                if response.status_code == 401:
-                    raise Exception("Invalid token or unauthorized access")
-                elif response.status_code == 404:
-                    raise Exception(f"File not found: {url}")
-                elif not response.ok:
-                    raise Exception(f"Download failed with status {response.status_code}: {response.text}")
-
-                with open(filepath, 'wb') as f:
-                    for chunk in response.iter_content(chunk_size=8192):
-                        if chunk:
-                            f.write(chunk)
-
-                if self.debug:
-                    print(f"File downloaded successfully: {filepath}")
-                return
-
-            except requests.exceptions.RequestException as e:
-                if attempt == retries - 1:
-                    raise Exception(f"Download failed after {retries} attempts: {str(e)}")
-                time.sleep(2 ** attempt)  # Exponential backoff
-
-        raise Exception("Unexpected error in file download")
+            print(f"[Client] {message}")

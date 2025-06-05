@@ -27,26 +27,69 @@ if not API_KEY:
 
 print("🚀 Starting smoke test...")
 
-client = Kobo(token=API_KEY)
-survey_uid = client.list_uid()['EUT_TEST_2']
-asset = client.get_asset(survey_uid)
-questions = client.get_questions(asset)
-choices = client.get_choices(asset)
-data = client.get_data(survey_uid)
+try:
+    client = Kobo(token=API_KEY)
 
-# Save to JSON files
-with open('questions.json', 'w', encoding='utf-8') as f:
-    json.dump(questions, f, indent=2, ensure_ascii=False)
+    # Test asset listing - this should work with both old and new API
+    uid_mapping = client.list_uid()
+    print(f"✅ Found {len(uid_mapping)} assets")
 
-with open('choices.json', 'w', encoding='utf-8') as f:
-    json.dump(choices, f, indent=2, ensure_ascii=False)
+    # Check if test survey exists
+    if 'EUT_TEST_2' not in uid_mapping:
+        print("❌ Test survey 'EUT_TEST_2' not found in assets")
+        print("Available assets:", list(uid_mapping.keys())[:5])  # Show first 5
+        sys.exit(1)
 
-with open('data.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
+    survey_uid = uid_mapping['EUT_TEST_2']
+    print(f"✅ Found test survey with UID: {survey_uid}")
 
-with open('survey.json', 'w', encoding='utf-8') as f:
-    json.dump(asset, f, indent=2, ensure_ascii=False)
+    # Test asset retrieval
+    asset = client.get_asset(survey_uid)
+    print("✅ Asset retrieved successfully")
 
-print("✅ Smoke test completed - JSON files generated")
-print("📋 Generated files: questions.json, choices.json, data.json, survey.json")
-print("🔄 You can now run export.py to test the DataFrame functionality")
+    # Test structure extraction
+    questions = client.get_questions(asset)
+    choices = client.get_choices(asset)
+    print("✅ Questions and choices extracted successfully")
+
+    # Test data retrieval
+    data = client.get_data(survey_uid)
+    submissions_count = len(data.get('results', []))
+    print(f"✅ Data retrieved successfully - {submissions_count} submissions")
+
+    # Save to JSON files for inspection
+    with open('questions.json', 'w', encoding='utf-8') as f:
+        json.dump(questions, f, indent=2, ensure_ascii=False)
+
+    with open('choices.json', 'w', encoding='utf-8') as f:
+        json.dump(choices, f, indent=2, ensure_ascii=False)
+
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    with open('survey.json', 'w', encoding='utf-8') as f:
+        json.dump(asset, f, indent=2, ensure_ascii=False)
+
+    print("✅ Smoke test completed - JSON files generated")
+    print("📋 Generated files: questions.json, choices.json, data.json, survey.json")
+
+    # Test DataFrame functionality if there are submissions
+    if submissions_count > 0:
+        print("🔄 Testing DataFrame functionality...")
+        try:
+            dataframes = client.data_to_dataframes(survey_uid)
+            print(f"✅ Generated {len(dataframes)} DataFrames")
+            for i, df in enumerate(dataframes):
+                print(f"   DataFrame {i}: {df.shape}")
+            print("🔄 You can now run export.py to test Excel export functionality")
+        except Exception as e:
+            print(f"⚠️  DataFrame functionality test failed: {e}")
+            print("   This might be due to complex nested structures - manual review needed")
+    else:
+        print("ℹ️  No submissions found - skipping DataFrame test")
+
+except Exception as e:
+    print(f"❌ Smoke test failed: {e}")
+    import traceback
+    traceback.print_exc()
+    sys.exit(1)

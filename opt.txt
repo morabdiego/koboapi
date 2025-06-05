@@ -1,0 +1,761 @@
+# ====================
+# exceptions.py
+# ====================
+"""Custom exceptions for KoboAPI."""
+
+class KoboAPIError(Exception):
+    """Base exception for KoboAPI errors."""
+    pass
+
+class AuthenticationError(KoboAPIError):
+    """Raised when authentication fails."""
+    pass
+
+class ResourceNotFoundError(KoboAPIError):
+    """Raised when a resource is not found."""
+    pass
+
+class DownloadError(KoboAPIError):
+    """Raised when file download fails."""
+    pass
+
+# ====================
+# models.py
+# ====================
+"""Data models for KoboAPI."""
+
+from dataclasses import dataclass
+from typing import Dict, List, Any, Optional
+
+@dataclass
+class Question:
+    """Represents a survey question."""
+    name: str
+    type: str
+    label: str
+    sequence: int
+    required: bool = False
+    list_name: Optional[str] = None
+    path: str = ""
+
+    @property
+    def original_name(self) -> str:
+        """Get the original question name without path."""
+        return self.name.split('/')[-1] if '/' in self.name else self.name
+
+@dataclass
+class RepeatGroup:
+    """Represents a repeat group in the survey."""
+    name: str
+    label: str
+    sequence: int
+    path: str = ""
+    level: int = 0
+
+    @property
+    def simple_name(self) -> str:
+        """Get the simple name without path."""
+        return self.name.split('/')[-1] if '/' in self.name else self.name
+
+    @property
+    def parent_path(self) -> Optional[str]:
+        """Get the parent path."""
+        return '/'.join(self.name.split('/')[:-1]) if '/' in self.name else None
+
+@dataclass
+class SurveyStructure:
+    """Represents the complete survey structure."""
+    questions: Dict[str, Question]
+    repeat_groups: Dict[str, RepeatGroup]
+
+    def get_questions_by_type(self, question_type: str) -> Dict[str, Question]:
+        """Get all questions of a specific type."""
+        return {name: q for name, q in self.questions.items() if q.type == question_type}
+
+    def get_questions_by_path(self, path: str = "") -> Dict[str, Question]:
+        """Get all questions in a specific path."""
+        return {name: q for name, q in self.questions.items() if q.path == path}
+
+# ====================
+# utils.py
+# ====================
+"""Utility functions for KoboAPI."""
+
+import json
+import os
+from typing import Dict, Any, List, Optional
+import pandas as pd
+
+def safe_filename(name: str, max_length: int = 255) -> str:
+    """Create a filesystem-safe filename."""
+    safe_name = "".join(c for c in name if c.isalnum() or c in (' ', '-', '_')).rstrip()
+    safe_name = safe_name.replace(' ', '_') if safe_name else 'unnamed'
+    return safe_name[:max_length]
+
+def load_json_file(filepath: str) -> Dict[str, Any]:
+    """Load JSON data from file with error handling."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File not found: {filepath}")
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Invalid JSON in file {filepath}: {str(e)}")
+
+def ensure_directory(directory: str) -> None:
+    """Ensure directory exists, create if it doesn't."""
+    os.makedirs(directory, exist_ok=True)
+
+def get_nested_value(data: Dict[str, Any], path: str, default: Any = None) -> Any:
+    """Get nested dictionary value using dot notation path."""
+    keys = path.split('.')
+    current = data
+    try:
+        for key in keys:
+            current = current[key]
+        return current
+    except (KeyError, TypeError):
+        return default
+
+# ====================
+# structure_parser.py
+# ====================
+"""Parser for XLSForm structure."""
+
+from typing import Dict, List, Any, Optional
+from .models import Question, RepeatGroup, SurveyStructure
+
+class StructureParser:
+    """Parses XLSForm JSON structure into structured models."""
+
+    def __init__(self, xlsform_json: Dict[str, Any]):
+        self.xlsform = xlsform_json
+        self._sequence = 0
+
+    def parse(self) -> SurveyStructure:
+        """Parse the XLSForm structure."""
+        questions = {}
+        repeat_groups = {}
+
+        self._parse_level(
+            self.xlsform.get('questions', {}),
+            self.xlsform.get('groups', {}),
+            questions,
+            repeat_groups,
+            prefix=""
+        )
+
+        return SurveyStructure(questions=questions, repeat_groups=repeat_groups)
+
+    def _parse_level(self, questions: Dict, groups: Dict,
+                    all_questions: Dict[str, Question],
+                    all_groups: Dict[str, RepeatGroup],
+                    prefix: str) -> None:
+        """Parse questions and groups at current level."""
+        # Parse questions
+        for q_name, q_data in questions.items():
+            full_name = f"{prefix}{q_name}" if prefix else q_name
+            question = Question(
+                name=full_name,
+                type=q_data.get('type', ''),
+                label=q_data.get('label', q_name),
+                sequence=q_data.get('sequence', self._sequence),
+                required=q_data.get('required', False),
+                list_name=q_data.get('list_name'),
+                path=prefix.rstrip('/')
+            )
+            all_questions[full_name] = question
+            self._sequence += 1
+
+        # Parse groups
+        for g_name, g_data in groups.items():
+            full_name = f"{prefix}{g_name}" if prefix else g_name
+            new_prefix = f"{full_name}/"
+
+            if g_data.get('repeat', False):
+                repeat_group = RepeatGroup(
+                    name=full_name,
+                    label=g_data.get('label', g_name),
+                    sequence=g_data.get('sequence', self._sequence),
+                    path=prefix.rstrip('/'),
+                    level=full_name.count('/')
+                )
+                all_groups[full_name] = repeat_group
+                self._sequence += 1
+
+            # Recursively parse nested content
+            if 'questions' in g_data or 'groups' in g_data:
+                self._parse_level(
+                    g_data.get('questions', {}),
+                    g_data.get('groups', {}),
+                    all_questions,
+                    all_groups,
+                    new_prefix
+                )
+
+# ====================
+# data_processor.py
+# ====================
+"""Processes survey submission data."""
+
+from typing import Dict, List, Any, Optional
+import pandas as pd
+from collections import defaultdict
+from .models import SurveyStructure, RepeatGroup
+
+class DataProcessor:
+    """Processes survey submissions into structured DataFrames."""
+
+    METADATA_COLUMNS = [
+        '_id', 'formhub/uuid', '__version__', 'meta/instanceID',
+        '_xform_id_string', '_uuid', 'meta/rootUuid', '_attachments',
+        '_status', '_geolocation', '_submission_time', '_tags',
+        '_notes', '_validation_status', '_submitted_by'
+    ]
+
+    def __init__(self, structure: SurveyStructure):
+        self.structure = structure
+
+    def process_submissions(self, submissions: List[Dict[str, Any]]) -> List[pd.DataFrame]:
+        """Process submissions into separate DataFrames by level."""
+        if not submissions:
+            return []
+
+        dataframes = []
+
+        # Main DataFrame
+        main_df = self._create_main_dataframe(submissions)
+        if not main_df.empty:
+            dataframes.append(main_df)
+
+        # Repeat group DataFrames
+        sorted_groups = self._get_sorted_repeat_groups()
+        for group_name, group in sorted_groups:
+            group_df = self._create_repeat_dataframe(submissions, group)
+            if not group_df.empty:
+                dataframes.append(group_df)
+
+        return dataframes
+
+    def _create_main_dataframe(self, submissions: List[Dict[str, Any]]) -> pd.DataFrame:
+        """Create main DataFrame with non-repeat questions."""
+        main_questions = self.structure.get_questions_by_path("")
+        all_rows = []
+
+        for submission in submissions:
+            row = self._initialize_row(main_questions)
+            self._fill_row_data(row, submission, is_main=True)
+            all_rows.append(row)
+
+        return pd.DataFrame(all_rows) if all_rows else pd.DataFrame()
+
+    def _create_repeat_dataframe(self, submissions: List[Dict[str, Any]],
+                                group: RepeatGroup) -> pd.DataFrame:
+        """Create DataFrame for a specific repeat group."""
+        group_questions = {
+            name: q for name, q in self.structure.questions.items()
+            if q.path == group.name or q.path.startswith(f"{group.name}/")
+        }
+
+        all_rows = []
+
+        for submission in submissions:
+            submission_id = submission.get('_id', submission.get('meta/instanceID', ''))
+            group_rows = self._extract_repeat_data(
+                submission, group, group_questions, submission_id
+            )
+            all_rows.extend(group_rows)
+
+        return pd.DataFrame(all_rows) if all_rows else pd.DataFrame()
+
+    def _initialize_row(self, questions: Dict[str, Any]) -> Dict[str, Any]:
+        """Initialize a row with all possible columns."""
+        row = {}
+
+        # Add metadata columns
+        for col in self.METADATA_COLUMNS:
+            row[col] = None
+
+        # Add question columns
+        for question in questions.values():
+            row[question.original_name] = None
+
+        return row
+
+    def _fill_row_data(self, row: Dict[str, Any], data: Dict[str, Any],
+                      is_main: bool = False) -> None:
+        """Fill row with actual data."""
+        for key, value in data.items():
+            if not isinstance(value, list):  # Skip repeat data
+                original_key = key.split('/')[-1] if '/' in key else key
+                if original_key in row:
+                    row[original_key] = value
+
+    def _extract_repeat_data(self, submission: Dict[str, Any], group: RepeatGroup,
+                           questions: Dict[str, Any], submission_id: str) -> List[Dict[str, Any]]:
+        """Extract data for repeat group with proper nesting handling."""
+        path_parts = group.name.split('/')
+        rows = []
+
+        if group.level == 0:
+            # First level repeat
+            items = submission.get(group.simple_name, [])
+            for item in items:
+                row = {'_parent_id': submission_id}
+                self._initialize_row_for_group(row, questions)
+                self._fill_row_data(row, item)
+                rows.append(row)
+        else:
+            # Nested repeat - implement recursive extraction
+            rows = self._extract_nested_repeat_data(
+                submission, path_parts, questions, submission_id
+            )
+
+        return rows
+
+    def _extract_nested_repeat_data(self, submission: Dict[str, Any],
+                                   path_parts: List[str], questions: Dict[str, Any],
+                                   submission_id: str) -> List[Dict[str, Any]]:
+        """Extract nested repeat group data recursively."""
+        # This is a simplified version - full implementation would handle arbitrary nesting
+        rows = []
+
+        if len(path_parts) >= 2:
+            first_level = submission.get(path_parts[0], [])
+            for i, first_item in enumerate(first_level):
+                first_level_id = f"{submission_id}_{i + 1}"
+
+                if len(path_parts) == 2:
+                    second_level_key = f"{path_parts[0]}/{path_parts[1]}"
+                    second_items = first_item.get(second_level_key, [])
+
+                    for second_item in second_items:
+                        row = {
+                            '_parent_id': submission_id,
+                            f'_{path_parts[0]}_id': first_level_id
+                        }
+                        self._initialize_row_for_group(row, questions)
+                        self._fill_row_data(row, second_item)
+                        rows.append(row)
+
+        return rows
+
+    def _initialize_row_for_group(self, row: Dict[str, Any],
+                                 questions: Dict[str, Any]) -> None:
+        """Initialize row with group-specific columns."""
+        for question in questions.values():
+            row[question.original_name] = None
+
+    def _get_sorted_repeat_groups(self) -> List[tuple]:
+        """Get repeat groups sorted by level."""
+        return sorted(
+            self.structure.repeat_groups.items(),
+            key=lambda x: x[1].level
+        )
+
+# ====================
+# exporter.py
+# ====================
+"""Export functionality for processed data."""
+
+import pandas as pd
+from typing import List, Dict, Any, Optional
+from .models import SurveyStructure
+from .utils import safe_filename
+
+class DataExporter:
+    """Handles exporting processed data to various formats."""
+
+    def __init__(self, structure: Optional[SurveyStructure] = None):
+        self.structure = structure
+
+    def to_excel(self, dataframes: List[pd.DataFrame], filepath: str,
+                survey_name: str = "Survey") -> None:
+        """Export DataFrames to Excel with proper sheet naming."""
+        if not dataframes:
+            raise ValueError("No DataFrames to export")
+
+        sheet_names = self._generate_sheet_names(len(dataframes), survey_name)
+
+        with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
+            for i, df in enumerate(dataframes):
+                sheet_name = sheet_names[i]
+                clean_name = safe_filename(sheet_name, 31)  # Excel sheet name limit
+                df.to_excel(writer, sheet_name=clean_name, index=False)
+
+        print(f"Successfully exported {len(dataframes)} sheets to {filepath}")
+
+    def _generate_sheet_names(self, count: int, base_name: str) -> List[str]:
+        """Generate appropriate sheet names."""
+        names = [base_name]
+
+        if self.structure:
+            sorted_groups = sorted(
+                self.structure.repeat_groups.items(),
+                key=lambda x: x[1].level
+            )
+            for _, group in sorted_groups:
+                names.append(group.label or group.simple_name.title())
+
+        # Fill remaining with generic names
+        while len(names) < count:
+            names.append(f'Sheet_{len(names)}')
+
+        return names[:count]
+
+# ====================
+# builder.py (Refactored)
+# ====================
+"""Main builder class that orchestrates the data processing."""
+
+from typing import Dict, List, Any, Optional
+import pandas as pd
+from .models import SurveyStructure
+from .structure_parser import StructureParser
+from .data_processor import DataProcessor
+from .exporter import DataExporter
+
+class XLSFormDataBuilder:
+    """
+    Main class that orchestrates XLSForm data processing.
+    Follows single responsibility principle with clear separation of concerns.
+    """
+
+    def __init__(self, xlsform_json: Dict[str, Any]):
+        self.parser = StructureParser(xlsform_json)
+        self.structure = self.parser.parse()
+        self.processor = DataProcessor(self.structure)
+        self.exporter = DataExporter(self.structure)
+
+    def process_submissions(self, submissions: List[Dict[str, Any]]) -> List[pd.DataFrame]:
+        """Process submissions into DataFrames."""
+        return self.processor.process_submissions(submissions)
+
+    def export_to_excel(self, dataframes: List[pd.DataFrame], filepath: str,
+                       survey_name: str = "Survey") -> None:
+        """Export DataFrames to Excel file."""
+        self.exporter.to_excel(dataframes, filepath, survey_name)
+
+    def get_structure_summary(self) -> Dict[str, Any]:
+        """Get a summary of the form structure."""
+        return {
+            'total_questions': len(self.structure.questions),
+            'repeat_groups': list(self.structure.repeat_groups.keys()),
+            'question_types': list(set(q.type for q in self.structure.questions.values()))
+        }
+
+    def get_questions_by_type(self, question_type: str) -> Dict[str, Any]:
+        """Get questions of specific type."""
+        return self.structure.get_questions_by_type(question_type)
+
+# ====================
+# client.py (Optimized)
+# ====================
+"""Optimized HTTP client for KoboAPI requests."""
+
+import requests
+import time
+from typing import Dict, Any, Optional, Union
+from urllib.parse import urljoin
+from .exceptions import AuthenticationError, ResourceNotFoundError, KoboAPIError
+
+class APIClient:
+    """
+    Optimized HTTP client with better error handling and configuration.
+    """
+
+    # Status code mappings
+    ERROR_MAPPING = {
+        401: AuthenticationError,
+        404: ResourceNotFoundError,
+    }
+
+    def __init__(self, token: str, base_url: str, debug: bool = False,
+                 timeout: int = 30, max_retries: int = 3):
+        self.token = token
+        self.base_url = base_url.rstrip('/')
+        self.debug = debug
+        self.timeout = timeout
+        self.max_retries = max_retries
+
+        self.session = self._create_session()
+
+    def _create_session(self) -> requests.Session:
+        """Create configured session with headers."""
+        session = requests.Session()
+        session.headers.update({
+            'Authorization': f'Token {self.token}',
+            'Content-Type': 'application/json',
+            'User-Agent': 'KoboAPI-Client/1.0'
+        })
+        return session
+
+    def _build_url(self, endpoint: str) -> str:
+        """Build complete URL with proper API versioning."""
+        if '/api/v2' not in self.base_url and not endpoint.startswith('/api/v2'):
+            endpoint = f'/api/v2{endpoint}' if not endpoint.startswith('/') else f'/api/v2{endpoint}'
+        return urljoin(self.base_url, endpoint)
+
+    def get(self, endpoint: str, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Make GET request with improved error handling."""
+        return self._make_request('GET', endpoint, params=params)
+
+    def download_file(self, url: str, filepath: str) -> None:
+        """Download file with streaming and proper error handling."""
+        self._log(f"Downloading: {url} -> {filepath}")
+
+        response = self._make_request_raw('GET', url, stream=True)
+
+        with open(filepath, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+        self._log(f"Download completed: {filepath}")
+
+    def _make_request(self, method: str, endpoint: str,
+                     params: Optional[Dict] = None,
+                     **kwargs) -> Dict[str, Any]:
+        """Make HTTP request with retries and error handling."""
+        url = self._build_url(endpoint) if not endpoint.startswith('http') else endpoint
+
+        response = self._make_request_raw(method, url, params=params, **kwargs)
+
+        try:
+            return response.json()
+        except ValueError as e:
+            raise KoboAPIError(f"Invalid JSON response: {str(e)}")
+
+    def _make_request_raw(self, method: str, url: str, **kwargs) -> requests.Response:
+        """Make raw HTTP request with retries."""
+        self._log(f"{method} {url}")
+
+        for attempt in range(self.max_retries):
+            try:
+                response = self.session.request(
+                    method, url, timeout=self.timeout, **kwargs
+                )
+                self._handle_response(response, url)
+                return response
+
+            except requests.exceptions.RequestException as e:
+                if attempt == self.max_retries - 1:
+                    raise KoboAPIError(f"Request failed after {self.max_retries} attempts: {str(e)}")
+                time.sleep(2 ** attempt)  # Exponential backoff
+
+        raise KoboAPIError("Unexpected error in request handling")
+
+    def _handle_response(self, response: requests.Response, url: str) -> None:
+        """Handle HTTP response with appropriate exceptions."""
+        if response.ok:
+            return
+
+        error_class = self.ERROR_MAPPING.get(response.status_code, KoboAPIError)
+        error_msg = f"Request to {url} failed ({response.status_code}): {response.text}"
+
+        raise error_class(error_msg)
+
+    def _log(self, message: str) -> None:
+        """Log debug messages if debugging is enabled."""
+        if self.debug:
+            print(f"[APIClient] {message}")
+
+# ====================
+# wrapper.py (Refactored)
+# ====================
+"""Main wrapper class with improved architecture."""
+
+from typing import Any, Dict, List, Optional
+import pandas as pd
+from .client import APIClient
+from .builder import XLSFormDataBuilder
+from .utils import safe_filename, ensure_directory
+from .exceptions import KoboAPIError
+
+class Kobo:
+    """
+    Main interface for KoBoToolbox API interactions.
+    Simplified and optimized for better maintainability.
+    """
+
+    ENDPOINTS = {
+        'default': 'https://kf.kobotoolbox.org/',
+        'humanitarian': 'https://kc.humanitarianresponse.info/'
+    }
+
+    def __init__(self, token: str, endpoint: str = 'default',
+                 debug: bool = False, **client_kwargs):
+        """Initialize Kobo client with improved configuration."""
+        resolved_endpoint = self.ENDPOINTS.get(endpoint, endpoint)
+        self.client = APIClient(token, resolved_endpoint, debug, **client_kwargs)
+        self.debug = debug
+
+    # Asset management methods
+    def list_assets(self) -> List[Dict[str, Any]]:
+        """List all assets."""
+        response = self.client.get('/assets.json')
+        return response.get('results', [])
+
+    def get_asset(self, asset_uid: str) -> Dict[str, Any]:
+        """Get asset details."""
+        return self.client.get(f'/assets/{asset_uid}.json')
+
+    def list_uid_mapping(self) -> Dict[str, str]:
+        """Get mapping of asset names to UIDs."""
+        return {
+            asset.get('name', ''): asset.get('uid', '')
+            for asset in self.list_assets()
+        }
+
+    # Data retrieval methods
+    def get_data(self, asset_uid: str, **params) -> Dict[str, Any]:
+        """Get survey data with flexible parameters."""
+        # Handle special parameter combinations
+        if 'query' in params and 'submitted_after' in params:
+            if self.debug:
+                print("Ignoring 'submitted_after' because 'query' is specified.")
+            params.pop('submitted_after')
+        elif 'submitted_after' in params:
+            submitted_after = params.pop('submitted_after')
+            params['query'] = f'{{"_submission_time": {{"$gt": "{submitted_after}"}}}}'
+
+        return self.client.get(f'/assets/{asset_uid}/data.json', params)
+
+    # Structure extraction methods
+    def get_questions(self, asset: Dict[str, Any]) -> Dict[str, Any]:
+        """Extract questions structure from asset."""
+        return self._parse_survey_content(asset.get('content', {}))
+
+    def get_choices(self, asset: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
+        """Extract choices from asset content."""
+        return self._parse_choices_content(asset.get('content', {}))
+
+    # Main processing methods
+    def to_dataframes(self, asset_uid: str) -> List[pd.DataFrame]:
+        """Convert survey data to DataFrames."""
+        asset = self.get_asset(asset_uid)
+        questions_structure = self.get_questions(asset)
+
+        builder = XLSFormDataBuilder(questions_structure)
+
+        data = self.get_data(asset_uid)
+        submissions = data.get('results', [])
+
+        return builder.process_submissions(submissions)
+
+    def to_excel(self, asset_uid: str, filepath: str, survey_name: str = None) -> None:
+        """Export survey data directly to Excel."""
+        if survey_name is None:
+            asset = self.get_asset(asset_uid)
+            survey_name = asset.get('name', 'Survey')
+
+        dataframes = self.to_dataframes(asset_uid)
+
+        # Use builder for export
+        asset = self.get_asset(asset_uid)
+        questions_structure = self.get_questions(asset)
+        builder = XLSFormDataBuilder(questions_structure)
+
+        builder.export_to_excel(dataframes, filepath, survey_name)
+
+    # File operations
+    def download_xlsform(self, asset_uid: str, download_dir: str = "downloads") -> str:
+        """Download XLS form file."""
+        asset = self.get_asset(asset_uid)
+
+        # Find XLS download URL
+        xls_url = self._find_download_url(asset, 'xls')
+        if not xls_url:
+            raise KoboAPIError(f"XLS format not available for asset {asset_uid}")
+
+        # Prepare file path
+        ensure_directory(download_dir)
+        filename = f"xlsform_{safe_filename(asset.get('name', asset_uid))}.xlsx"
+        filepath = os.path.join(download_dir, filename)
+
+        # Download
+        self.client.download_file(xls_url, filepath)
+        return filepath
+
+    # Private helper methods
+    def _parse_survey_content(self, content: Dict[str, Any]) -> Dict[str, Any]:
+        """Parse survey content into questions structure."""
+        sequence = 0
+        root_group = {'questions': {}, 'groups': {}}
+        group_stack = [root_group]
+        current_group = root_group
+
+        for item in content.get('survey', []):
+            item_type = item.get('type', '')
+
+            if item_type in ['begin_group', 'begin_repeat']:
+                new_group = {
+                    'label': self._extract_label(item),
+                    'sequence': sequence,
+                    'repeat': item_type == 'begin_repeat',
+                    'questions': {},
+                    'groups': {}
+                }
+                name = item.get('name') or item.get('$autoname')
+                current_group['groups'][name] = new_group
+                group_stack.append(current_group)
+                current_group = new_group
+                sequence += 1
+
+            elif item_type in ['end_group', 'end_repeat']:
+                current_group = group_stack.pop()
+
+            else:
+                name = item.get('name') or item.get('$autoname')
+                if name:
+                    question = {
+                        'type': item_type,
+                        'sequence': sequence,
+                        'label': self._extract_label(item) or name,
+                        'required': item.get('required', False)
+                    }
+
+                    if 'select_from_list_name' in item:
+                        question['list_name'] = item['select_from_list_name']
+
+                    current_group['questions'][name] = question
+                    sequence += 1
+
+        return root_group
+
+    def _parse_choices_content(self, content: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
+        """Parse choices from content."""
+        choice_lists = {}
+        sequence = 0
+
+        for choice_data in content.get('choices', []):
+            list_name = choice_data['list_name']
+            if list_name not in choice_lists:
+                choice_lists[list_name] = {}
+
+            label = self._extract_label(choice_data) or choice_data['name']
+
+            choice_lists[list_name][choice_data['name']] = {
+                'name': choice_data['name'],
+                'label': label,
+                'list_name': list_name,
+                'sequence': sequence
+            }
+            sequence += 1
+
+        return choice_lists
+
+    def _extract_label(self, item: Dict[str, Any]) -> str:
+        """Extract label from item, handling different formats."""
+        label = item.get('label', '')
+        if isinstance(label, list) and label:
+            return label[0]
+        return str(label) if label else ''
+
+    def _find_download_url(self, asset: Dict[str, Any], format_type: str) -> Optional[str]:
+        """Find download URL for specific format."""
+        downloads = asset.get('downloads', [])
+        for download in downloads:
+            if download.get('format') == format_type:
+                return download.get('url')
+        return None
