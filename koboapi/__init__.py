@@ -1,4 +1,4 @@
-"""KoboAPI - A Python wrapper for KoBoToolbox API."""
+"""KoboAPI - A Python wrapper for KoBoToolbox API with DataFrame export capabilities."""
 
 from .wrapper import Kobo
 

@@ -1,4 +1,4 @@
-.PHONY: clean uninstall build install all env test
+.PHONY: clean uninstall build install all env test smoke builder
 
 PACKAGE_NAME=koboapi
 
@@ -17,23 +17,27 @@ clean:
 
 uninstall:
 	echo "❌ Desinstalando paquete si está instalado..."
-	. ./venv/bin/activate
-	pip uninstall -y $(PACKAGE_NAME) || true
+	. ./venv/bin/activate && pip uninstall -y $(PACKAGE_NAME) || true
 
 build: clean
 	echo "📦 Construyendo paquete..."
-	. ./venv/bin/activate
-	python -m build
+	. ./venv/bin/activate && python -m build
 
 install: uninstall build
-	echo "📥 Instalando paquete desde dist/*.whl..."
-	. ./venv/bin/activate
-	pip install dist/*.whl
+	echo "📥 Instalando paquete desde dist/*.whl con --force-reinstall..."
+	. ./venv/bin/activate && pip install --force-reinstall dist/*.whl
 
 all: install
 	echo "🏁 Proceso completo (build, install) terminado."
 
 test:
 	echo "🧪 Ejecutando smoke tests..."
-	. ./venv/bin/activate
-	python tests/url.py
+	. ./venv/bin/activate && python tests/url.py
+
+smoke:
+	echo "🧪 Ejecutando smoke tests..."
+	. ./venv/bin/activate && python tests/smoke.py
+
+builder:
+	echo "📊 Ejecutando test de builder integrado..."
+	. ./venv/bin/activate && python tests/export.py

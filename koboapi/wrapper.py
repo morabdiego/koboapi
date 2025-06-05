@@ -2,7 +2,10 @@
 
 import os
 from typing import Any, Dict, List, Optional
+import pandas as pd
+from collections import defaultdict
 from .client import Client
+from .builder import XLSFormDataStructureBuilder, create_dataframes_from_submissions, get_columns_by_level
 
 class Kobo:
     """Extracts collected data from KoBoToolbox with improved architecture."""
@@ -199,3 +202,54 @@ class Kobo:
         self.client.download_file(xls_url, filepath)
 
         return filepath
+
+    def data_to_dataframes(self, asset_uid: str) -> List[pd.DataFrame]:
+        """Convert survey data to list of DataFrames by repeat groups.
+
+        Args:
+            asset_uid: The UID of the asset to process
+
+        Returns:
+            List of pandas DataFrames for each repeat group level
+        """
+        # Get asset information to extract questions structure
+        asset = self.get_asset(asset_uid)
+
+        # Get questions structure as schema
+        questions_structure = self.get_questions(asset)
+        builder = XLSFormDataStructureBuilder(questions_structure)
+
+        # Get submission data
+        data = self.get_data(asset_uid)
+        submissions = data.get('results', [])
+
+        return create_dataframes_from_submissions(submissions, builder)
+
+    def data_to_xlsx(self, asset_uid: str, file_path: str) -> None:
+        """Convert survey data and export directly to Excel file.
+
+        Args:
+            asset_uid: The UID of the asset to process
+            file_path: Path where to save the Excel file
+        """
+        dataframes = self.data_to_dataframes(asset_uid)
+        self._export_to_xlsx(dataframes, file_path)
+
+    def _export_to_xlsx(self, dataframes: List[pd.DataFrame], file_path: str) -> None:
+        """Export list of DataFrames to Excel file with separate sheets"""
+        if not dataframes:
+            print("No DataFrames to export")
+            return
+
+        # Sheet names for each DataFrame level
+        sheet_names = ['General', 'Hogar', 'Individuo']
+
+        with pd.ExcelWriter(file_path, engine='openpyxl') as writer:
+            for i, df in enumerate(dataframes):
+                sheet_name = sheet_names[i] if i < len(sheet_names) else f'Sheet_{i+1}'
+                df.to_excel(writer, sheet_name=sheet_name, index=False)
+                if self.debug:
+                    print(f"Exported {sheet_name} sheet with shape {df.shape}")
+
+        if self.debug:
+            print(f"Successfully exported {len(dataframes)} sheets to {file_path}")
