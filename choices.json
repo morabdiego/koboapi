@@ -1,62 +1,16 @@
 {
-  "si_no": {
-    "1": {
-      "name": "1",
-      "label": "Sí",
-      "list_name": "si_no",
-      "sequence": 0
-    },
-    "2": {
-      "name": "2",
-      "label": "No",
-      "list_name": "si_no",
-      "sequence": 1
-    }
-  },
-  "tenencia": {
-    "1": {
-      "name": "1",
-      "label": "Propietario",
-      "list_name": "tenencia",
-      "sequence": 2
-    },
-    "2": {
-      "name": "2",
-      "label": "Inquilino",
-      "list_name": "tenencia",
-      "sequence": 3
-    },
-    "3": {
-      "name": "3",
-      "label": "Ocupante por préstamo, cesión o permiso",
-      "list_name": "tenencia",
-      "sequence": 4
-    },
-    "4": {
-      "name": "4",
-      "label": "Ocupante de hecho",
-      "list_name": "tenencia",
-      "sequence": 5
-    },
-    "5": {
-      "name": "5",
-      "label": "Ocupante en relación de dependencia o trabajo",
-      "list_name": "tenencia",
-      "sequence": 6
-    }
-  },
   "sexo": {
     "1": {
       "name": "1",
       "label": "Masculino",
       "list_name": "sexo",
-      "sequence": 7
+      "sequence": 0
     },
     "2": {
       "name": "2",
       "label": "Femenino",
       "list_name": "sexo",
-      "sequence": 8
+      "sequence": 1
     }
   },
   "genero": {
@@ -64,25 +18,25 @@
       "name": "1",
       "label": "Hombre",
       "list_name": "genero",
-      "sequence": 9
+      "sequence": 2
     },
     "2": {
       "name": "2",
       "label": "Mujer",
       "list_name": "genero",
-      "sequence": 10
+      "sequence": 3
     },
     "3": {
       "name": "3",
       "label": "Otro",
       "list_name": "genero",
-      "sequence": 11
+      "sequence": 4
     },
     "4": {
       "name": "4",
       "label": "Prefiere no decir",
       "list_name": "genero",
-      "sequence": 12
+      "sequence": 5
     }
   },
   "parentesco": {
@@ -90,193 +44,85 @@
       "name": "1",
       "label": "Jefe/a",
       "list_name": "parentesco",
-      "sequence": 13
+      "sequence": 6
     },
     "2": {
       "name": "2",
       "label": "Cónyuge/pareja",
       "list_name": "parentesco",
-      "sequence": 14
+      "sequence": 7
     },
     "3": {
       "name": "3",
       "label": "Hijo/a",
       "list_name": "parentesco",
-      "sequence": 15
+      "sequence": 8
     },
     "4": {
       "name": "4",
       "label": "Hijastro/a",
       "list_name": "parentesco",
-      "sequence": 16
+      "sequence": 9
     },
     "5": {
       "name": "5",
       "label": "Yerno/nuera",
       "list_name": "parentesco",
-      "sequence": 17
+      "sequence": 10
     },
     "6": {
       "name": "6",
       "label": "Nieto/a",
       "list_name": "parentesco",
-      "sequence": 18
+      "sequence": 11
     },
     "7": {
       "name": "7",
       "label": "Padre o madre",
       "list_name": "parentesco",
-      "sequence": 19
+      "sequence": 12
     },
     "8": {
       "name": "8",
       "label": "Suegro/a",
       "list_name": "parentesco",
-      "sequence": 20
+      "sequence": 13
     },
     "9": {
       "name": "9",
       "label": "Hermano/a",
       "list_name": "parentesco",
-      "sequence": 21
+      "sequence": 14
     },
     "10": {
       "name": "10",
       "label": "Cuñado/a",
       "list_name": "parentesco",
-      "sequence": 22
+      "sequence": 15
     },
     "11": {
       "name": "11",
       "label": "Sobrino/a",
       "list_name": "parentesco",
-      "sequence": 23
+      "sequence": 16
     },
     "12": {
       "name": "12",
       "label": "Abuelo/a",
       "list_name": "parentesco",
-      "sequence": 24
+      "sequence": 17
     },
     "13": {
       "name": "13",
       "label": "Otro familiar",
       "list_name": "parentesco",
-      "sequence": 25
+      "sequence": 18
     },
     "14": {
       "name": "14",
       "label": "Otro no familiar",
       "list_name": "parentesco",
-      "sequence": 26
-    }
-  },
-  "motivo_no_trab": {
-    "1": {
-      "name": "1",
-      "label": "No deseaba/no quería trabajar",
-      "list_name": "motivo_no_trab",
-      "sequence": 27
-    },
-    "2": {
-      "name": "2",
-      "label": "No podía trabajar",
-      "list_name": "motivo_no_trab",
-      "sequence": 28
-    },
-    "3": {
-      "name": "3",
-      "label": "No tenía/no conseguía trabajo",
-      "list_name": "motivo_no_trab",
-      "sequence": 29
-    },
-    "4": {
-      "name": "4",
-      "label": "No tuvo pedidos/clientes",
-      "list_name": "motivo_no_trab",
-      "sequence": 30
-    },
-    "5": {
-      "name": "5",
-      "label": "Tenía un trabajo pero no concurrió",
-      "list_name": "motivo_no_trab",
-      "sequence": 31
-    }
-  },
-  "no_trab": {
-    "1": {
-      "name": "1",
-      "label": "Se dedica a tareas del hogar",
-      "list_name": "no_trab",
-      "sequence": 32
-    },
-    "2": {
-      "name": "2",
-      "label": "Tuvo que cuidar algún familiar",
-      "list_name": "no_trab",
-      "sequence": 33
-    },
-    "3": {
-      "name": "3",
-      "label": "Otras razones",
-      "list_name": "no_trab",
-      "sequence": 34
-    }
-  },
-  "ocup_ppal": {
-    "1": {
-      "name": "1",
-      "label": "Empleado/a formal o registrado (en blanco)",
-      "list_name": "ocup_ppal",
-      "sequence": 35
-    },
-    "2": {
-      "name": "2",
-      "label": "Empleado/a informal o no registrado (en negro)",
-      "list_name": "ocup_ppal",
-      "sequence": 36
-    },
-    "3": {
-      "name": "3",
-      "label": "Trabajador independiente, negocio propio o familiar",
-      "list_name": "ocup_ppal",
-      "sequence": 37
-    },
-    "4": {
-      "name": "4",
-      "label": "Trabajador/a de una cooperativa",
-      "list_name": "ocup_ppal",
-      "sequence": 38
-    },
-    "5": {
-      "name": "5",
-      "label": "Trabajo comunitario con contraprestación (VAT, PT, SSC)",
-      "list_name": "ocup_ppal",
-      "sequence": 39
-    },
-    "6": {
-      "name": "6",
-      "label": "Trabajo comunitario con contraprestación en especie",
-      "list_name": "ocup_ppal",
-      "sequence": 40
-    },
-    "7": {
-      "name": "7",
-      "label": "Trabajo comunitario sin contraprestación",
-      "list_name": "ocup_ppal",
-      "sequence": 41
-    },
-    "8": {
-      "name": "8",
-      "label": "Trabajo como empleador",
-      "list_name": "ocup_ppal",
-      "sequence": 42
-    },
-    "9": {
-      "name": "9",
-      "label": "Empleado/a de casas particulares",
-      "list_name": "ocup_ppal",
-      "sequence": 43
+      "sequence": 19
     }
   },
   "barrios": {
@@ -284,7 +130,7 @@
       "name": "1",
       "label": "ejemplo",
       "list_name": "barrios",
-      "sequence": 44
+      "sequence": 20
     }
   },
   "relevadores": {
@@ -292,7 +138,7 @@
       "name": "1",
       "label": "ejemplo",
       "list_name": "relevadores",
-      "sequence": 45
+      "sequence": 21
     }
   },
   "nivel_educ": {
@@ -300,371 +146,7 @@
       "name": "1",
       "label": "ejemplo",
       "list_name": "nivel_educ",
-      "sequence": 46
-    }
-  },
-  "day": {
-    "1": {
-      "name": "1",
-      "label": "Lunes",
-      "list_name": "day",
-      "sequence": 47
-    },
-    "2": {
-      "name": "2",
-      "label": "Martes",
-      "list_name": "day",
-      "sequence": 48
-    },
-    "3": {
-      "name": "3",
-      "label": "Miércoles",
-      "list_name": "day",
-      "sequence": 49
-    },
-    "4": {
-      "name": "4",
-      "label": "Jueves",
-      "list_name": "day",
-      "sequence": 50
-    },
-    "5": {
-      "name": "5",
-      "label": "Viernes",
-      "list_name": "day",
-      "sequence": 51
-    },
-    "6": {
-      "name": "6",
-      "label": "Sábado",
-      "list_name": "day",
-      "sequence": 52
-    },
-    "7": {
-      "name": "7",
-      "label": "Domingo",
-      "list_name": "day",
-      "sequence": 53
-    }
-  },
-  "actividades": {
-    "11": {
-      "name": "11",
-      "label": "Trabajo - 11 - Trabajar en una ocupación",
-      "list_name": "actividades",
-      "sequence": 54
-    },
-    "12": {
-      "name": "12",
-      "label": "Trabajo - 12 - Realizar una pasantía no remunerada",
-      "list_name": "actividades",
-      "sequence": 55
-    },
-    "13": {
-      "name": "13",
-      "label": "Trabajo - 13 - Buscar trabajo o iniciar un negocio",
-      "list_name": "actividades",
-      "sequence": 56
-    },
-    "14": {
-      "name": "14",
-      "label": "Trabajo - 14 - Viajar para y volver del trabajo",
-      "list_name": "actividades",
-      "sequence": 57
-    },
-    "2": {
-      "name": "2",
-      "label": "Trabajo - 2 - Trabajar para consumo propio del hogar",
-      "list_name": "actividades",
-      "sequence": 58
-    },
-    "411": {
-      "name": "411",
-      "label": "Cuidado - 411 - Cuidado permanente y apoyo a miembros del hogar de 0 a 14 años",
-      "list_name": "actividades",
-      "sequence": 59
-    },
-    "412": {
-      "name": "412",
-      "label": "Cuidado - 412 - Cuidado temporal de salud a miembros del hogar de 0 a 14 años",
-      "list_name": "actividades",
-      "sequence": 60
-    },
-    "413": {
-      "name": "413",
-      "label": "Cuidado - 413 - Apoyo escolar a miembros del hogar de 0 a 14 años",
-      "list_name": "actividades",
-      "sequence": 61
-    },
-    "414": {
-      "name": "414",
-      "label": "Cuidado - 414 - Acompañamiento y traslado de miembros del hogar de 0 a 14 años",
-      "list_name": "actividades",
-      "sequence": 62
-    },
-    "415": {
-      "name": "415",
-      "label": "Cuidado - 415 - Acompañamiento y traslado de miembros del hogar de 15 a 17 años",
-      "list_name": "actividades",
-      "sequence": 63
-    },
-    "421": {
-      "name": "421",
-      "label": "Cuidado - 421 - Cuidado permanente y apoyo a miembros del hogar que requieren cuidados especiales",
-      "list_name": "actividades",
-      "sequence": 64
-    },
-    "422": {
-      "name": "422",
-      "label": "Cuidado - 422 - Cuidado temporal de salud a miembros del hogar que requieren cuidados especiales",
-      "list_name": "actividades",
-      "sequence": 65
-    },
-    "423": {
-      "name": "423",
-      "label": "Cuidado - 423 - Acompañamiento y traslado a miembros del hogar que requieren cuidados especiales",
-      "list_name": "actividades",
-      "sequence": 66
-    },
-    "429": {
-      "name": "429",
-      "label": "Cuidado - 429 - Otras actividades de cuidado y apoyo a miembros del hogar que requieren cuidados especiales",
-      "list_name": "actividades",
-      "sequence": 67
-    },
-    "431": {
-      "name": "431",
-      "label": "Cuidado - 431 - Cuidado permanente y apoyo a miembros del hogar de 65 años y más",
-      "list_name": "actividades",
-      "sequence": 68
-    },
-    "432": {
-      "name": "432",
-      "label": "Cuidado - 432 - Cuidado temporal de salud a miembros del hogar de 65 años y más",
-      "list_name": "actividades",
-      "sequence": 69
-    },
-    "433": {
-      "name": "433",
-      "label": "Cuidado - 433 - Acompañamiento y traslado a miembros del hogar de 65 años y más",
-      "list_name": "actividades",
-      "sequence": 70
-    },
-    "439": {
-      "name": "439",
-      "label": "Cuidado - 439 - Otras actividades de cuidado y apoyo a miembros del hogar de 65 años y más",
-      "list_name": "actividades",
-      "sequence": 71
-    },
-    "441": {
-      "name": "441",
-      "label": "Cuidado - 441 - Cuidado permanente y apoyo a miembros del hogar con enfermedad, discapacidad o dependencia",
-      "list_name": "actividades",
-      "sequence": 72
-    },
-    "442": {
-      "name": "442",
-      "label": "Cuidado - 442 - Cuidado de salud a miembros del hogar con discapacidad",
-      "list_name": "actividades",
-      "sequence": 73
-    },
-    "443": {
-      "name": "443",
-      "label": "Cuidado - 443 - Acompañamiento y traslado a algún lugar a miembros del hogar con discapacidad",
-      "list_name": "actividades",
-      "sequence": 74
-    },
-    "449": {
-      "name": "449",
-      "label": "Cuidado - 449 - Otras actividades de cuidado a miembros del hogar con discapacidad",
-      "list_name": "actividades",
-      "sequence": 75
-    },
-    "31": {
-      "name": "31",
-      "label": "Domésticas - 31 - Preparar y servir la comida",
-      "list_name": "actividades",
-      "sequence": 76
-    },
-    "32": {
-      "name": "32",
-      "label": "Domésticas - 32 - Limpiar la vivienda",
-      "list_name": "actividades",
-      "sequence": 77
-    },
-    "33": {
-      "name": "33",
-      "label": "Domésticas - 33 - Lavar, planchar o arreglar la ropa/calzado",
-      "list_name": "actividades",
-      "sequence": 78
-    },
-    "34": {
-      "name": "34",
-      "label": "Domésticas - 34 - Reparar y mantener la vivienda o los bienes del hogar",
-      "list_name": "actividades",
-      "sequence": 79
-    },
-    "35": {
-      "name": "35",
-      "label": "Domésticas - 35 - Hacer pago y trámites del hogar",
-      "list_name": "actividades",
-      "sequence": 80
-    },
-    "36": {
-      "name": "36",
-      "label": "Domésticas - 36 - Hacer compras para el hogar",
-      "list_name": "actividades",
-      "sequence": 81
-    },
-    "37": {
-      "name": "37",
-      "label": "Domésticas - 37 - Cuidar mascotas y plantas",
-      "list_name": "actividades",
-      "sequence": 82
-    },
-    "511": {
-      "name": "511",
-      "label": "Personal - 511 - Higienizarse o arreglarse",
-      "list_name": "actividades",
-      "sequence": 83
-    },
-    "512": {
-      "name": "512",
-      "label": "Personal - 512 - Cuidar su salud o hacer terapias y tratamientos",
-      "list_name": "actividades",
-      "sequence": 84
-    },
-    "514": {
-      "name": "514",
-      "label": "Personal - 514 - Viajar para cuidar su salud",
-      "list_name": "actividades",
-      "sequence": 85
-    },
-    "521": {
-      "name": "521",
-      "label": "Personal - 521 - Comer y beber",
-      "list_name": "actividades",
-      "sequence": 86
-    },
-    "522": {
-      "name": "522",
-      "label": "Personal - 522 - Dormir",
-      "list_name": "actividades",
-      "sequence": 87
-    },
-    "523": {
-      "name": "523",
-      "label": "Personal - 523 - Descansar, rezar o meditar y otras actividades personales",
-      "list_name": "actividades",
-      "sequence": 88
-    },
-    "61": {
-      "name": "61",
-      "label": "Personal - 61 - Estudiar",
-      "list_name": "actividades",
-      "sequence": 89
-    },
-    "62": {
-      "name": "62",
-      "label": "Personal - 62 - Viajar para estudiar",
-      "list_name": "actividades",
-      "sequence": 90
-    },
-    "711": {
-      "name": "711",
-      "label": "Ocio - 711 - Recurrir con familiares o amigos",
-      "list_name": "actividades",
-      "sequence": 91
-    },
-    "712": {
-      "name": "712",
-      "label": "Ocio - 712 - Participar de celebraciones comunitarias, políticas o religiosas",
-      "list_name": "actividades",
-      "sequence": 92
-    },
-    "72": {
-      "name": "72",
-      "label": "Ocio - 72 - Asistir a eventos o espectáculos",
-      "list_name": "actividades",
-      "sequence": 93
-    },
-    "73": {
-      "name": "73",
-      "label": "Ocio - 73 - Realizar actividades artísticas, juegos o entretenimientos",
-      "list_name": "actividades",
-      "sequence": 94
-    },
-    "74": {
-      "name": "74",
-      "label": "Ocio - 74 - Hacer deportes o ejercicio físico",
-      "list_name": "actividades",
-      "sequence": 95
-    },
-    "81": {
-      "name": "81",
-      "label": "Ocio - 81 - Ver libros o revistas",
-      "list_name": "actividades",
-      "sequence": 96
-    },
-    "82": {
-      "name": "82",
-      "label": "Ocio - 82 - Ver televisión, videos o transmisiones en vivo",
-      "list_name": "actividades",
-      "sequence": 97
-    },
-    "83": {
-      "name": "83",
-      "label": "Ocio - 83 - Escuchar música o radio",
-      "list_name": "actividades",
-      "sequence": 98
-    },
-    "84": {
-      "name": "84",
-      "label": "Ocio - 84 - Usar computadora o tableta",
-      "list_name": "actividades",
-      "sequence": 99
-    },
-    "85": {
-      "name": "85",
-      "label": "Ocio - 85 - Usar el celular",
-      "list_name": "actividades",
-      "sequence": 100
-    },
-    "52": {
-      "name": "52",
-      "label": "Voluntarias - 52 - Hacer trabajo voluntario para la comunidad",
-      "list_name": "actividades",
-      "sequence": 101
-    },
-    "53": {
-      "name": "53",
-      "label": "Voluntarias - 53 - Hacer trabajo voluntario en instituciones sin fines de lucro",
-      "list_name": "actividades",
-      "sequence": 102
-    },
-    "54": {
-      "name": "54",
-      "label": "Voluntarias - 54 - Ayudar a otros hogares familiares sin pago",
-      "list_name": "actividades",
-      "sequence": 103
-    },
-    "55": {
-      "name": "55",
-      "label": "Voluntarias - 55 - Ayudar a otros hogares no familiares sin pago",
-      "list_name": "actividades",
-      "sequence": 104
-    },
-    "999": {
-      "name": "999",
-      "label": "Sin clasificar - 999 - Otras actividades sin clasificar",
-      "list_name": "actividades",
-      "sequence": 105
-    },
-    "0": {
-      "name": "0",
-      "label": "Ninguna - 000 - Ninguna",
-      "list_name": "actividades",
-      "sequence": 106
+      "sequence": 22
     }
   }
 }

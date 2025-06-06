@@ -35,12 +35,12 @@ try:
     print(f"✅ Found {len(uid_mapping)} assets")
 
     # Check if test survey exists
-    if 'EUT_TEST_2' not in uid_mapping:
-        print("❌ Test survey 'EUT_TEST_2' not found in assets")
+    if 'simple' not in uid_mapping:
+        print("❌ Test survey 'simple' not found in assets")
         print("Available assets:", list(uid_mapping.keys())[:5])  # Show first 5
         sys.exit(1)
 
-    survey_uid = uid_mapping['EUT_TEST_2']
+    survey_uid = uid_mapping['simple']
     print(f"✅ Found test survey with UID: {survey_uid}")
 
     # Test asset retrieval

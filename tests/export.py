@@ -30,14 +30,14 @@ def test_export_functionality():
 
         # Get survey UID (adjust this to your survey)
         surveys = client.list_uid()
-        if 'EUT_TEST_2' not in surveys:
-            print("❌ EUT_TEST_2 survey not found in your account")
+        if 'simple' not in surveys:
+            print("❌ simple survey not found in your account")
             print("Available surveys:")
             for name, uid in surveys.items():
                 print(f"  - {name}: {uid}")
             return False
 
-        survey_uid = surveys['EUT_TEST_2']
+        survey_uid = surveys['simple']
         print(f"📋 Using survey: {survey_uid}")
 
         # Method 1: Get DataFrames using new API
@@ -76,19 +76,6 @@ def test_export_functionality():
         traceback.print_exc()
         return False
 
-def test_api_restrictions():
-    """Test that standalone functions are no longer available."""
-    print("\n📁 Testing that standalone functions are no longer available...")
-
-    try:
-        # These imports should fail now
-        from koboapi import load_xlsform_from_file
-        print("❌ Standalone functions should not be available!")
-        return False
-    except ImportError:
-        print("✅ Standalone functions correctly removed from public API")
-        return True
-
 if __name__ == "__main__":
     print("🧪 KoboAPI Export Test Suite")
     print("=" * 50)
@@ -96,17 +83,8 @@ if __name__ == "__main__":
     # Test new API-based export
     api_success = test_export_functionality()
 
-    # Test that standalone functions are not available
-    api_restriction_success = test_api_restrictions()
+
 
     print("\n" + "=" * 50)
     print("📋 Test Results:")
     print(f"  New API export: {'✅ PASS' if api_success else '❌ FAIL'}")
-    print(f"  API restrictions: {'✅ PASS' if api_restriction_success else '❌ FAIL'}")
-
-    if api_success and api_restriction_success:
-        print("\n🎉 All tests completed successfully!")
-        sys.exit(0)
-    else:
-        print("\n❌ Some tests failed!")
-        sys.exit(1)

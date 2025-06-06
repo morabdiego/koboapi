@@ -1,5 +1,5 @@
 {
-  "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG.json",
+  "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ.json",
   "owner": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
   "owner__username": "observatoriovillero",
   "parent": null,
@@ -23,13 +23,13 @@
   "asset_type": "survey",
   "files": [],
   "summary": {
-    "geo": true,
+    "geo": false,
     "labels": [
       "Barrio",
       "ID del relevador",
-      "Coordenadas GPS",
-      "Dirección: Calle",
-      "Dirección: Altura"
+      "¿Cuántos hogares conforman la vivienda?",
+      "Información del hogar ${nhog}",
+      "Número de hogar"
     ],
     "columns": [
       "name",
@@ -37,483 +37,110 @@
       "label",
       "select_from_list_name",
       "default",
-      "relevant",
-      "constraint",
       "repeat_count",
-      "calculation",
-      "constraint_message",
-      "# required",
-      "appearance"
+      "calculation"
     ],
     "lock_all": false,
     "lock_any": false,
     "languages": [],
-    "row_count": 182,
+    "row_count": 14,
     "name_quality": {
       "ok": 0,
       "bad": 0,
-      "good": 182,
-      "total": 182,
+      "good": 14,
+      "total": 14,
       "firsts": {}
     },
     "default_translation": null
   },
-  "date_created": "2025-05-29T15:27:42.488281Z",
-  "date_modified": "2025-06-04T22:42:41.968006Z",
-  "date_deployed": "2025-06-04T22:42:41.949943Z",
-  "version_id": "vZhZqujRAxkUjJ7NHFrPnj",
-  "version__content_hash": "faa4af7970ae92295956610112f87ecb1c443c96",
-  "version_count": 5,
+  "date_created": "2025-06-05T20:22:06.867835Z",
+  "date_modified": "2025-06-05T20:22:31.972703Z",
+  "date_deployed": "2025-06-05T20:22:31.954395Z",
+  "version_id": "vMpZFaVikoPNtqee3w5eiK",
+  "version__content_hash": "f2df897cd28833524ef510eb3166e9d7bdcc7281",
+  "version_count": 3,
   "has_deployment": true,
-  "deployed_version_id": "vZhZqujRAxkUjJ7NHFrPnj",
+  "deployed_version_id": "vMpZFaVikoPNtqee3w5eiK",
   "deployed_versions": {
-    "count": 3,
+    "count": 1,
     "next": null,
     "previous": null,
     "results": [
       {
-        "uid": "vZhZqujRAxkUjJ7NHFrPnj",
-        "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/versions/vZhZqujRAxkUjJ7NHFrPnj/",
-        "content_hash": "faa4af7970ae92295956610112f87ecb1c443c96",
-        "date_deployed": "2025-06-04T22:42:41.943103Z",
-        "date_modified": "2025-06-04T22:42:41.943103Z"
-      },
-      {
-        "uid": "v6WWeRq7bwMJvwehCakemx",
-        "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/versions/v6WWeRq7bwMJvwehCakemx/",
-        "content_hash": "8aed3fe1098b4da121b2f7022ac74fce5f90f3de",
-        "date_deployed": "2025-06-04T22:32:36.788604Z",
-        "date_modified": "2025-06-04T22:32:36.788604Z"
-      },
-      {
-        "uid": "vAfzTRiD7zXhhHQXh5gcDu",
-        "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/versions/vAfzTRiD7zXhhHQXh5gcDu/",
-        "content_hash": "02d8239ebe8e47239818ad3948986bab888bc874",
-        "date_deployed": "2025-05-29T15:28:29.784393Z",
-        "date_modified": "2025-05-29T15:28:29.784393Z"
+        "uid": "vMpZFaVikoPNtqee3w5eiK",
+        "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/versions/vMpZFaVikoPNtqee3w5eiK/",
+        "content_hash": "f2df897cd28833524ef510eb3166e9d7bdcc7281",
+        "date_deployed": "2025-06-05T20:22:31.950282Z",
+        "date_modified": "2025-06-05T20:22:31.950282Z"
       }
     ]
   },
   "deployment__links": {
-    "url": "https://ee.kobotoolbox.org/t7mArPo6",
-    "single_url": "https://ee.kobotoolbox.org/single/t7mArPo6",
-    "single_once_url": "https://ee.kobotoolbox.org/single/1dca39c4d944ce6795cb519728af9cdd",
-    "offline_url": "https://ee.kobotoolbox.org/x/t7mArPo6",
-    "preview_url": "https://ee.kobotoolbox.org/preview/t7mArPo6",
-    "iframe_url": "https://ee.kobotoolbox.org/i/t7mArPo6",
-    "single_iframe_url": "https://ee.kobotoolbox.org/single/i/t7mArPo6",
-    "single_once_iframe_url": "https://ee.kobotoolbox.org/single/i/1dca39c4d944ce6795cb519728af9cdd"
+    "url": "https://ee.kobotoolbox.org/iWK8ciWE",
+    "single_url": "https://ee.kobotoolbox.org/single/iWK8ciWE",
+    "single_once_url": "https://ee.kobotoolbox.org/single/ca1eeb8328ad035b866bff121870c253",
+    "offline_url": "https://ee.kobotoolbox.org/x/iWK8ciWE",
+    "preview_url": "https://ee.kobotoolbox.org/preview/iWK8ciWE",
+    "iframe_url": "https://ee.kobotoolbox.org/i/iWK8ciWE",
+    "single_iframe_url": "https://ee.kobotoolbox.org/single/i/iWK8ciWE",
+    "single_once_iframe_url": "https://ee.kobotoolbox.org/single/i/ca1eeb8328ad035b866bff121870c253"
   },
   "deployment__active": true,
   "deployment__data_download_links": {
-    "xls_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/a5NSCkEEVQvWrrkifBDtPG/xls/",
-    "csv_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/a5NSCkEEVQvWrrkifBDtPG/csv/",
-    "zip_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/a5NSCkEEVQvWrrkifBDtPG/zip/",
-    "kml_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/a5NSCkEEVQvWrrkifBDtPG/kml/",
-    "xls": "https://kc.kobotoolbox.org/observatoriovillero/reports/a5NSCkEEVQvWrrkifBDtPG/export.xlsx",
-    "csv": "https://kc.kobotoolbox.org/observatoriovillero/reports/a5NSCkEEVQvWrrkifBDtPG/export.csv"
+    "xls_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/aYiEMb38mgpDwkY3E5WvQZ/xls/",
+    "csv_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/aYiEMb38mgpDwkY3E5WvQZ/csv/",
+    "zip_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/aYiEMb38mgpDwkY3E5WvQZ/zip/",
+    "kml_legacy": "https://kc.kobotoolbox.org/observatoriovillero/exports/aYiEMb38mgpDwkY3E5WvQZ/kml/",
+    "xls": "https://kc.kobotoolbox.org/observatoriovillero/reports/aYiEMb38mgpDwkY3E5WvQZ/export.xlsx",
+    "csv": "https://kc.kobotoolbox.org/observatoriovillero/reports/aYiEMb38mgpDwkY3E5WvQZ/export.csv"
   },
   "deployment__submission_count": 2,
   "deployment_status": "deployed",
   "report_styles": {
     "default": {},
     "specified": {
-      "da": {},
-      "tc": {},
-      "day": {},
-      "eut": {},
-      "gps": {},
-      "itf": {},
       "edad": {},
       "nhog": {},
-      "ocup": {},
       "sexo": {},
       "hogar": {},
-      "hs_tc": {},
-      "today": {},
       "barrio": {},
-      "empleo": {},
-      "filter": {},
       "genero": {},
-      "desocup": {},
       "hog_tot": {},
-      "hs_ppal": {},
       "miembro": {},
-      "no_trab": {},
-      "dir_casa": {},
-      "dir_piso": {},
       "relev_id": {},
-      "tenencia": {},
       "vivienda": {},
-      "2yqZNXDRu": {},
-      "6rnp5TVGZ": {},
-      "Ec9ppwOUG": {},
-      "Pf7oIlZAa": {},
-      "QVc8E7KqA": {},
-      "dir_calle": {},
-      "dir_other": {},
+      "EsjjjOyNs": {},
       "individuo": {},
-      "ocup_ppal": {},
-      "y4NhwXa0Q": {},
-      "act_1_0000": {},
-      "act_1_0030": {},
-      "act_1_0100": {},
-      "act_1_0130": {},
-      "act_1_0200": {},
-      "act_1_0230": {},
-      "act_1_0300": {},
-      "act_1_0330": {},
-      "act_1_0400": {},
-      "act_1_0430": {},
-      "act_1_0500": {},
-      "act_1_0530": {},
-      "act_1_0600": {},
-      "act_1_0630": {},
-      "act_1_0700": {},
-      "act_1_0730": {},
-      "act_1_0800": {},
-      "act_1_0830": {},
-      "act_1_0900": {},
-      "act_1_0930": {},
-      "act_1_1000": {},
-      "act_1_1030": {},
-      "act_1_1100": {},
-      "act_1_1130": {},
-      "act_1_1200": {},
-      "act_1_1230": {},
-      "act_1_1300": {},
-      "act_1_1330": {},
-      "act_1_1400": {},
-      "act_1_1430": {},
-      "act_1_1500": {},
-      "act_1_1530": {},
-      "act_1_1600": {},
-      "act_1_1630": {},
-      "act_1_1700": {},
-      "act_1_1730": {},
-      "act_1_1800": {},
-      "act_1_1830": {},
-      "act_1_1900": {},
-      "act_1_1930": {},
-      "act_1_2000": {},
-      "act_1_2030": {},
-      "act_1_2100": {},
-      "act_1_2130": {},
-      "act_1_2200": {},
-      "act_1_2230": {},
-      "act_1_2300": {},
-      "act_1_2330": {},
-      "act_2_0000": {},
-      "act_2_0030": {},
-      "act_2_0100": {},
-      "act_2_0130": {},
-      "act_2_0200": {},
-      "act_2_0230": {},
-      "act_2_0300": {},
-      "act_2_0330": {},
-      "act_2_0400": {},
-      "act_2_0430": {},
-      "act_2_0500": {},
-      "act_2_0530": {},
-      "act_2_0600": {},
-      "act_2_0630": {},
-      "act_2_0700": {},
-      "act_2_0730": {},
-      "act_2_0800": {},
-      "act_2_0830": {},
-      "act_2_0900": {},
-      "act_2_0930": {},
-      "act_2_1000": {},
-      "act_2_1030": {},
-      "act_2_1100": {},
-      "act_2_1130": {},
-      "act_2_1200": {},
-      "act_2_1230": {},
-      "act_2_1300": {},
-      "act_2_1330": {},
-      "act_2_1400": {},
-      "act_2_1430": {},
-      "act_2_1500": {},
-      "act_2_1530": {},
-      "act_2_1600": {},
-      "act_2_1630": {},
-      "act_2_1700": {},
-      "act_2_1730": {},
-      "act_2_1800": {},
-      "act_2_1830": {},
-      "act_2_1900": {},
-      "act_2_1930": {},
-      "act_2_2000": {},
-      "act_2_2030": {},
-      "act_2_2100": {},
-      "act_2_2130": {},
-      "act_2_2200": {},
-      "act_2_2230": {},
-      "act_2_2300": {},
-      "act_2_2330": {},
-      "act_3_0000": {},
-      "act_3_0030": {},
-      "act_3_0100": {},
-      "act_3_0130": {},
-      "act_3_0200": {},
-      "act_3_0230": {},
-      "act_3_0300": {},
-      "act_3_0330": {},
-      "act_3_0400": {},
-      "act_3_0430": {},
-      "act_3_0500": {},
-      "act_3_0530": {},
-      "act_3_0600": {},
-      "act_3_0630": {},
-      "act_3_0700": {},
-      "act_3_0730": {},
-      "act_3_0800": {},
-      "act_3_0830": {},
-      "act_3_0900": {},
-      "act_3_0930": {},
-      "act_3_1000": {},
-      "act_3_1030": {},
-      "act_3_1100": {},
-      "act_3_1130": {},
-      "act_3_1200": {},
-      "act_3_1230": {},
-      "act_3_1300": {},
-      "act_3_1330": {},
-      "act_3_1400": {},
-      "act_3_1430": {},
-      "act_3_1500": {},
-      "act_3_1530": {},
-      "act_3_1600": {},
-      "act_3_1630": {},
-      "act_3_1700": {},
-      "act_3_1730": {},
-      "act_3_1800": {},
-      "act_3_1830": {},
-      "act_3_1900": {},
-      "act_3_1930": {},
-      "act_3_2000": {},
-      "act_3_2030": {},
-      "act_3_2100": {},
-      "act_3_2130": {},
-      "act_3_2200": {},
-      "act_3_2230": {},
-      "act_3_2300": {},
-      "act_3_2330": {},
-      "dir_altura": {},
-      "filter_eut": {},
+      "kieZRrGwC": {},
       "hogar_data": {},
       "nivel_educ": {},
       "parentesco": {},
       "multi_hogar": {},
       "nombre_pila": {},
-      "filter_hogar": {},
-      "dia_tipico_tc": {},
-      "detect_hogares": {},
-      "motivo_no_trab": {},
       "vivienda_hogar": {},
-      "dir_manzana_tira": {},
-      "sociodem_individuo": {},
-      "dia_tipico_ocupados": {},
-      "día_tipico_inactivos_desempleados": {}
+      "sociodem_individuo": {}
     },
     "kuid_names": {
-      "da": "ynL8nYj88",
-      "tc": "WSGXgrJ1a",
-      "day": "uY83EKzag",
-      "eut": "5fwWYaFZH",
-      "gps": "nBbfiaZC9",
-      "itf": "bZxIGzIKe",
-      "edad": "Oc2ywkJbp",
-      "nhog": "RSKq9DkfF",
-      "ocup": "tqog38To8",
-      "sexo": "1tj4IaWaW",
-      "hogar": "qsfumd1o8",
-      "hs_tc": "LMYAKeB5d",
-      "today": "eWq0xk6TV",
-      "barrio": "9HgxbZaYa",
-      "empleo": "WCjeasOd4",
-      "filter": "nDmfSdgE2",
-      "genero": "cXY29Nn4n",
-      "desocup": "CanSaV5og",
-      "hog_tot": "MIIvCd1S4",
-      "hs_ppal": "Ux5LDRQnd",
-      "miembro": "gtz5UX303",
-      "no_trab": "FQKVHvVNn",
-      "dir_casa": "w6aJxzKUS",
-      "dir_piso": "genkAz5e2",
-      "relev_id": "JNRlsj0kN",
-      "tenencia": "WgTe49Wlb",
-      "vivienda": "NLAqBlexr",
-      "2yqZNXDRu": "2yqZNXDRu",
-      "6rnp5TVGZ": "6rnp5TVGZ",
-      "Ec9ppwOUG": "Ec9ppwOUG",
-      "Pf7oIlZAa": "Pf7oIlZAa",
-      "QVc8E7KqA": "QVc8E7KqA",
-      "dir_calle": "jjUEeq2IT",
-      "dir_other": "oZcLXqhCv",
-      "individuo": "1ekPuybPk",
-      "ocup_ppal": "vYhHvQaDI",
-      "y4NhwXa0Q": "y4NhwXa0Q",
-      "act_1_0000": "exKTnQ6IE",
-      "act_1_0030": "UhXLXjKFt",
-      "act_1_0100": "tPX18ek1A",
-      "act_1_0130": "DcWx2MHat",
-      "act_1_0200": "tV1UEOdFO",
-      "act_1_0230": "YDMtc61oA",
-      "act_1_0300": "dvvz5jXoA",
-      "act_1_0330": "vRRMffOU6",
-      "act_1_0400": "E7cZZoosU",
-      "act_1_0430": "4oGl1Wj8g",
-      "act_1_0500": "P1YnExyQa",
-      "act_1_0530": "Tn5GUhDU5",
-      "act_1_0600": "EYv89z8pX",
-      "act_1_0630": "NmwKanV7t",
-      "act_1_0700": "iGOqbyMEk",
-      "act_1_0730": "HPxumQXUG",
-      "act_1_0800": "LFg8NG4WF",
-      "act_1_0830": "OJyrWK2X8",
-      "act_1_0900": "HJZpPjCSR",
-      "act_1_0930": "u5wLk2cS6",
-      "act_1_1000": "OY6g0a729",
-      "act_1_1030": "BmQ80mrbb",
-      "act_1_1100": "mAk8fSLYf",
-      "act_1_1130": "WYtedBiv0",
-      "act_1_1200": "IB9Ngljpj",
-      "act_1_1230": "9uyzpLu9d",
-      "act_1_1300": "6QX2F0m5c",
-      "act_1_1330": "eoUlPuj39",
-      "act_1_1400": "sXIaxxF9r",
-      "act_1_1430": "srF3nz2ol",
-      "act_1_1500": "crEFDDOgh",
-      "act_1_1530": "iEFYYmJRm",
-      "act_1_1600": "2YQ0UpvAY",
-      "act_1_1630": "2AbiwWI6N",
-      "act_1_1700": "g7IZsVty8",
-      "act_1_1730": "rWL2lkPwG",
-      "act_1_1800": "RHikFO9is",
-      "act_1_1830": "O8qKfUQgz",
-      "act_1_1900": "N9GMCINLT",
-      "act_1_1930": "OY7uWvfEg",
-      "act_1_2000": "JcuLEZPTZ",
-      "act_1_2030": "QWpx9EB1c",
-      "act_1_2100": "At8V04H5t",
-      "act_1_2130": "uhflAHs1K",
-      "act_1_2200": "vmc69JOIH",
-      "act_1_2230": "V4BaAB1fk",
-      "act_1_2300": "fTsHh7Zxd",
-      "act_1_2330": "YNxT6S4Bx",
-      "act_2_0000": "feIi9TEsc",
-      "act_2_0030": "cXx6ZnTCP",
-      "act_2_0100": "g9OtdVFsP",
-      "act_2_0130": "iB1P0TyDP",
-      "act_2_0200": "TUFr3pwVc",
-      "act_2_0230": "0ODaTVmXH",
-      "act_2_0300": "JjQIgwawh",
-      "act_2_0330": "OmwWh39Uj",
-      "act_2_0400": "H4gGVzyuQ",
-      "act_2_0430": "A22KucAtA",
-      "act_2_0500": "tdXbaZYE1",
-      "act_2_0530": "il6RZRGkj",
-      "act_2_0600": "dvxSYuSFs",
-      "act_2_0630": "75oQIkiE1",
-      "act_2_0700": "MI4niOwmq",
-      "act_2_0730": "gSUygySn5",
-      "act_2_0800": "h3uEIu7xN",
-      "act_2_0830": "Utb0Ouo84",
-      "act_2_0900": "8kRd27ybv",
-      "act_2_0930": "vZDJzUf2u",
-      "act_2_1000": "m4MM7g1Ux",
-      "act_2_1030": "wUuSzdnqG",
-      "act_2_1100": "PKJpwFtUe",
-      "act_2_1130": "KKq8QeMWg",
-      "act_2_1200": "u8y7FSOAx",
-      "act_2_1230": "QSCYWf6BK",
-      "act_2_1300": "KCxKcgqTG",
-      "act_2_1330": "zMfA2omSL",
-      "act_2_1400": "PRbnMTBo1",
-      "act_2_1430": "arEHrXWaW",
-      "act_2_1500": "sYyQc2x8W",
-      "act_2_1530": "jg7Zfcwxc",
-      "act_2_1600": "WsyaZq2vA",
-      "act_2_1630": "GLAoNLOFf",
-      "act_2_1700": "srJbeGpqm",
-      "act_2_1730": "qqseX38R3",
-      "act_2_1800": "z4v4EgYD7",
-      "act_2_1830": "KQEat30yW",
-      "act_2_1900": "UJZQl3g7Y",
-      "act_2_1930": "W2sVEWUhd",
-      "act_2_2000": "kyhXlnUd5",
-      "act_2_2030": "1bEjKQZYl",
-      "act_2_2100": "z4IrJSNHZ",
-      "act_2_2130": "JlJlIzLHD",
-      "act_2_2200": "RyTgIZ7MZ",
-      "act_2_2230": "IXXL9YubN",
-      "act_2_2300": "sK8KmB96M",
-      "act_2_2330": "XniwmsMCl",
-      "act_3_0000": "6gWHJFi8B",
-      "act_3_0030": "DTv59Vmbs",
-      "act_3_0100": "jns9VTu9b",
-      "act_3_0130": "DzKy6Whxu",
-      "act_3_0200": "hkuhUM18y",
-      "act_3_0230": "a0jIT3i85",
-      "act_3_0300": "RvrwYuw8B",
-      "act_3_0330": "dD3rdslkg",
-      "act_3_0400": "QEnotEdIw",
-      "act_3_0430": "IPNyUdWan",
-      "act_3_0500": "AgkO9r4mI",
-      "act_3_0530": "pEJPTf1jS",
-      "act_3_0600": "ZsdLofNR3",
-      "act_3_0630": "e4QVGUHwN",
-      "act_3_0700": "TtzAn220B",
-      "act_3_0730": "syMmRZD3F",
-      "act_3_0800": "DbXQNYh4X",
-      "act_3_0830": "GnkoF1tK5",
-      "act_3_0900": "nhft69Q0f",
-      "act_3_0930": "iioQbZTMh",
-      "act_3_1000": "6gNnj1LIq",
-      "act_3_1030": "xgJKNLvVi",
-      "act_3_1100": "cd4cTUDk6",
-      "act_3_1130": "AbwDqml7l",
-      "act_3_1200": "KCiLUPvbi",
-      "act_3_1230": "S6qeqBMW2",
-      "act_3_1300": "n3YUqImuI",
-      "act_3_1330": "O29n68zLU",
-      "act_3_1400": "fkyi7W05r",
-      "act_3_1430": "hv9vnKsEp",
-      "act_3_1500": "aXB7yCVht",
-      "act_3_1530": "EAvZu3V26",
-      "act_3_1600": "OwJf6NhNm",
-      "act_3_1630": "Yh9zSAaGc",
-      "act_3_1700": "xQuorOoHf",
-      "act_3_1730": "shifp8wEo",
-      "act_3_1800": "z9MusliwM",
-      "act_3_1830": "Rd87f0qeU",
-      "act_3_1900": "636iCdqIa",
-      "act_3_1930": "Wu1fIK14O",
-      "act_3_2000": "sWPaUnYoP",
-      "act_3_2030": "RKHQcP85A",
-      "act_3_2100": "Aioj894Ml",
-      "act_3_2130": "a61v2Iw2c",
-      "act_3_2200": "qeE5rwRfI",
-      "act_3_2230": "Lqgz2UfVY",
-      "act_3_2300": "r0JVoKjmw",
-      "act_3_2330": "aFXN57XSX",
-      "dir_altura": "hs4xurEaJ",
-      "filter_eut": "Y0Gp69dSK",
-      "hogar_data": "OfdmnYnUd",
-      "nivel_educ": "luHIwJtwf",
-      "parentesco": "ZSESYUfh1",
-      "multi_hogar": "75WtBq0Xz",
-      "nombre_pila": "RroSunsAn",
-      "filter_hogar": "orVnRX3L2",
-      "dia_tipico_tc": "C003SsFWg",
-      "detect_hogares": "yxqoQxCtR",
-      "motivo_no_trab": "VDgclb2wd",
-      "vivienda_hogar": "bcAWSjsPK",
-      "dir_manzana_tira": "zPKVMI45j",
-      "sociodem_individuo": "zdCjwwhdi",
-      "dia_tipico_ocupados": "BFtpMRTW9",
-      "día_tipico_inactivos_desempleados": "cwd9rqFRQ"
+      "edad": "Qd0FbOjI7",
+      "nhog": "9nuAwlJCC",
+      "sexo": "8Cbdxqlah",
+      "hogar": "YYbBxCyx0",
+      "barrio": "wOtFNA5Pq",
+      "genero": "NcOJepoKa",
+      "hog_tot": "fP8H4nlrG",
+      "miembro": "KritM62uS",
+      "relev_id": "Mfl0uvoNF",
+      "vivienda": "ZgzatmoDN",
+      "EsjjjOyNs": "EsjjjOyNs",
+      "individuo": "Ye995BnCZ",
+      "kieZRrGwC": "kieZRrGwC",
+      "hogar_data": "iVCMOKe9U",
+      "nivel_educ": "dn599vbqA",
+      "parentesco": "MlKVcR1T2",
+      "multi_hogar": "p4uqXrORi",
+      "nombre_pila": "sJBuuHg64",
+      "vivienda_hogar": "O9vn75RYH",
+      "sociodem_individuo": "aj0F35AX4"
     }
   },
   "report_custom": {},
@@ -534,7 +161,7 @@
       {
         "name": "vivienda",
         "type": "begin_group",
-        "$kuid": "22I7cEJOW",
+        "$kuid": "sjLEcqhX8",
         "label": [
           "Información de la vivienda"
         ],
@@ -545,7 +172,7 @@
       {
         "name": "barrio",
         "type": "select_one",
-        "$kuid": "9HgxbZaYa",
+        "$kuid": "wOtFNA5Pq",
         "label": [
           "Barrio"
         ],
@@ -556,7 +183,7 @@
       {
         "name": "relev_id",
         "type": "select_one",
-        "$kuid": "JNRlsj0kN",
+        "$kuid": "Mfl0uvoNF",
         "label": [
           "ID del relevador"
         ],
@@ -565,95 +192,14 @@
         "select_from_list_name": "relevadores"
       },
       {
-        "name": "gps",
-        "type": "geopoint",
-        "$kuid": "nBbfiaZC9",
-        "label": [
-          "Coordenadas GPS"
-        ],
-        "$xpath": "vivienda/gps",
-        "$autoname": "gps"
-      },
-      {
-        "name": "dir_calle",
-        "type": "text",
-        "$kuid": "jjUEeq2IT",
-        "label": [
-          "Dirección: Calle"
-        ],
-        "$xpath": "vivienda/dir_calle",
-        "$autoname": "dir_calle"
-      },
-      {
-        "name": "dir_altura",
-        "type": "text",
-        "$kuid": "hs4xurEaJ",
-        "label": [
-          "Dirección: Altura"
-        ],
-        "$xpath": "vivienda/dir_altura",
-        "$autoname": "dir_altura"
-      },
-      {
-        "name": "dir_piso",
-        "type": "text",
-        "$kuid": "genkAz5e2",
-        "label": [
-          "Dirección: Piso"
-        ],
-        "$xpath": "vivienda/dir_piso",
-        "$autoname": "dir_piso"
-      },
-      {
-        "name": "dir_manzana_tira",
-        "type": "text",
-        "$kuid": "zPKVMI45j",
-        "label": [
-          "Dirección: Manzana/Tira/Pasillo"
-        ],
-        "$xpath": "vivienda/dir_manzana_tira",
-        "$autoname": "dir_manzana_tira"
-      },
-      {
-        "name": "dir_casa",
-        "type": "text",
-        "$kuid": "w6aJxzKUS",
-        "label": [
-          "Dirección: Casa/Departamento"
-        ],
-        "$xpath": "vivienda/dir_casa",
-        "$autoname": "dir_casa"
-      },
-      {
-        "name": "dir_other",
-        "type": "text",
-        "$kuid": "oZcLXqhCv",
-        "label": [
-          "Dirección: Otras indicaciones"
-        ],
-        "$xpath": "vivienda/dir_other",
-        "$autoname": "dir_other"
-      },
-      {
-        "name": "detect_hogares",
-        "type": "select_one",
-        "$kuid": "yxqoQxCtR",
-        "label": [
-          "¿Todos los integrantes de la vivienda comparten gastos del hogar?"
-        ],
-        "$xpath": "vivienda/detect_hogares",
-        "$autoname": "detect_hogares",
-        "select_from_list_name": "si_no"
-      },
-      {
         "name": "vivienda",
         "type": "end_group",
-        "$kuid": "NLAqBlexr"
+        "$kuid": "ZgzatmoDN"
       },
       {
         "name": "vivienda_hogar",
         "type": "begin_group",
-        "$kuid": "WtWd4Ujba",
+        "$kuid": "2xk77Sq2q",
         "label": [
           "Viviendas con más de un hogar"
         ],
@@ -663,25 +209,23 @@
       {
         "name": "multi_hogar",
         "type": "integer",
-        "$kuid": "75WtBq0Xz",
+        "$kuid": "p4uqXrORi",
         "label": [
           "¿Cuántos hogares conforman la vivienda?"
         ],
         "$xpath": "vivienda_hogar/multi_hogar",
         "default": "1",
-        "relevant": "${detect_hogares} = 2",
-        "$autoname": "multi_hogar",
-        "constraint": ". >= 1 and . <= 5"
+        "$autoname": "multi_hogar"
       },
       {
         "name": "vivienda_hogar",
         "type": "end_group",
-        "$kuid": "bcAWSjsPK"
+        "$kuid": "O9vn75RYH"
       },
       {
         "name": "hogar",
         "type": "begin_repeat",
-        "$kuid": "qsfumd1o8",
+        "$kuid": "YYbBxCyx0",
         "label": [
           "Información del hogar ${nhog}"
         ],
@@ -692,7 +236,7 @@
       {
         "name": "nhog",
         "type": "calculate",
-        "$kuid": "RSKq9DkfF",
+        "$kuid": "9nuAwlJCC",
         "label": [
           "Número de hogar"
         ],
@@ -701,88 +245,35 @@
         "calculation": "position(..)"
       },
       {
-        "name": "filter_hogar",
-        "type": "begin_group",
-        "$kuid": "giVeuqUFR",
-        "label": [
-          "¿Se encuentra el hogar?"
-        ],
-        "$xpath": "hogar/filter_hogar",
-        "$autoname": "filter_hogar",
-        "appearance": "field-list"
-      },
-      {
-        "name": "filter",
-        "type": "select_one",
-        "$kuid": "nDmfSdgE2",
-        "label": [
-          "¿El hogar accede a la entrevista?"
-        ],
-        "$xpath": "hogar/filter_hogar/filter",
-        "$autoname": "filter",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "filter_hogar",
-        "type": "end_group",
-        "$kuid": "orVnRX3L2"
-      },
-      {
         "name": "hogar_data",
         "type": "begin_group",
-        "$kuid": "NJsIxDnAh",
+        "$kuid": "Da77y8bzO",
         "label": [
           "Información general del hogar"
         ],
         "$xpath": "hogar/hogar_data",
-        "relevant": "${filter} = 1",
         "$autoname": "hogar_data",
         "appearance": "field-list"
       },
       {
         "name": "hog_tot",
         "type": "integer",
-        "$kuid": "MIIvCd1S4",
+        "$kuid": "fP8H4nlrG",
         "label": [
           "¿Cuántos integrantes conforman este hogar?"
         ],
         "$xpath": "hogar/hogar_data/hog_tot",
-        "$autoname": "hog_tot",
-        "constraint": ". >= 1 and . <= 15",
-        "constraint_message": "Ingrese un número entre 1 y 15"
-      },
-      {
-        "name": "tenencia",
-        "type": "select_one",
-        "$kuid": "WgTe49Wlb",
-        "label": [
-          "¿Este hogar es...?"
-        ],
-        "$xpath": "hogar/hogar_data/tenencia",
-        "$autoname": "tenencia",
-        "select_from_list_name": "tenencia"
-      },
-      {
-        "name": "itf",
-        "type": "decimal",
-        "$kuid": "bZxIGzIKe",
-        "label": [
-          "¿Cuál fue el ingreso total del hogar el último mes?"
-        ],
-        "$xpath": "hogar/hogar_data/itf",
-        "$autoname": "itf",
-        "constraint": ". >= 0",
-        "constraint_message": "Ingrese un valor válido"
+        "$autoname": "hog_tot"
       },
       {
         "name": "hogar_data",
         "type": "end_group",
-        "$kuid": "OfdmnYnUd"
+        "$kuid": "iVCMOKe9U"
       },
       {
         "name": "individuo",
         "type": "begin_repeat",
-        "$kuid": "1ekPuybPk",
+        "$kuid": "Ye995BnCZ",
         "label": [
           "Hogar ${nhog}: Información individual. Integrante ${miembro}"
         ],
@@ -793,7 +284,7 @@
       {
         "name": "miembro",
         "type": "calculate",
-        "$kuid": "gtz5UX303",
+        "$kuid": "KritM62uS",
         "label": [
           "Número de miembro"
         ],
@@ -804,7 +295,7 @@
       {
         "name": "sociodem_individuo",
         "type": "begin_group",
-        "$kuid": "ffEQPotbh",
+        "$kuid": "y9dWkwJmA",
         "label": [
           "Datos personales"
         ],
@@ -815,2401 +306,85 @@
       {
         "name": "nombre_pila",
         "type": "text",
-        "$kuid": "RroSunsAn",
+        "$kuid": "sJBuuHg64",
         "label": [
           "Nombre de pila"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/nombre_pila",
-        "$autoname": "nombre_pila",
-        "# required": "yes"
+        "$autoname": "nombre_pila"
       },
       {
         "name": "edad",
         "type": "integer",
-        "$kuid": "Oc2ywkJbp",
+        "$kuid": "Qd0FbOjI7",
         "label": [
           "¿Cuál es la edad de ${nombre_pila} en años cumplidos?"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/edad",
-        "$autoname": "edad",
-        "# required": "yes",
-        "constraint": ". >= 0",
-        "constraint_message": "Ingrese una edad válida"
+        "$autoname": "edad"
       },
       {
         "name": "sexo",
         "type": "select_one",
-        "$kuid": "1tj4IaWaW",
+        "$kuid": "8Cbdxqlah",
         "label": [
           "¿Cuál es el sexo de ${nombre_pila}?"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/sexo",
         "$autoname": "sexo",
-        "# required": "yes",
         "select_from_list_name": "sexo"
       },
       {
         "name": "genero",
         "type": "select_one",
-        "$kuid": "cXY29Nn4n",
+        "$kuid": "NcOJepoKa",
         "label": [
           "Y de acuerdo a la identidad de género, ¿${nombre_pila} se considera...?"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/genero",
         "$autoname": "genero",
-        "# required": "yes",
         "select_from_list_name": "genero"
       },
       {
         "name": "parentesco",
         "type": "select_one",
-        "$kuid": "ZSESYUfh1",
+        "$kuid": "MlKVcR1T2",
         "label": [
           "¿Cuál es su parentesco con el jefe/a?"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/parentesco",
         "$autoname": "parentesco",
-        "# required": "yes",
         "select_from_list_name": "parentesco"
       },
       {
         "name": "nivel_educ",
         "type": "select_one",
-        "$kuid": "luHIwJtwf",
+        "$kuid": "dn599vbqA",
         "label": [
           "Nivel educativo alcanzado"
         ],
         "$xpath": "hogar/individuo/sociodem_individuo/nivel_educ",
         "$autoname": "nivel_educ",
-        "# required": "yes",
         "select_from_list_name": "nivel_educ"
       },
       {
         "name": "sociodem_individuo",
         "type": "end_group",
-        "$kuid": "zdCjwwhdi"
-      },
-      {
-        "name": "empleo",
-        "type": "begin_group",
-        "$kuid": "dP1N8FXp3",
-        "label": [
-          "Datos de trabajo y empleo"
-        ],
-        "$xpath": "hogar/individuo/empleo",
-        "relevant": "${edad} >= 14",
-        "$autoname": "empleo",
-        "appearance": "field-list"
-      },
-      {
-        "name": "filter_eut",
-        "type": "select_one",
-        "$kuid": "i1H1OYKGp",
-        "label": [
-          "¿A ${nombre_pila} se le realizará el diario de actividades?"
-        ],
-        "$xpath": "hogar/individuo/empleo/filter_eut",
-        "$autoname": "filter_eut",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "ocup",
-        "type": "select_one",
-        "$kuid": "tqog38To8",
-        "label": [
-          "La semana pasada, ¿${nombre_pila} trabajó al menos una hora?"
-        ],
-        "$xpath": "hogar/individuo/empleo/ocup",
-        "$autoname": "ocup",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "motivo_no_trab",
-        "type": "select_one",
-        "$kuid": "VDgclb2wd",
-        "label": [
-          "La semana pasada no trabajó porque..."
-        ],
-        "$xpath": "hogar/individuo/empleo/motivo_no_trab",
-        "relevant": "${ocup} = 2",
-        "$autoname": "motivo_no_trab",
-        "# required": "yes",
-        "select_from_list_name": "motivo_no_trab"
-      },
-      {
-        "name": "no_trab",
-        "type": "select_one",
-        "$kuid": "FQKVHvVNn",
-        "label": [
-          "La razón por la que no deseaba o quería trabajar era"
-        ],
-        "$xpath": "hogar/individuo/empleo/no_trab",
-        "relevant": "${motivo_no_trab} = 1",
-        "$autoname": "no_trab",
-        "# required": "yes",
-        "select_from_list_name": "no_trab"
-      },
-      {
-        "name": "desocup",
-        "type": "select_one",
-        "$kuid": "CanSaV5og",
-        "label": [
-          "En los últimos 30 días, ¿estuvo buscando trabajo de alguna manera?"
-        ],
-        "$xpath": "hogar/individuo/empleo/desocup",
-        "relevant": "${ocup} = 2 and ${motivo_no_trab} != 1",
-        "$autoname": "desocup",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "ocup_ppal",
-        "type": "select_one",
-        "$kuid": "vYhHvQaDI",
-        "label": [
-          "¿Cómo identifica su trabajo en relación a su ocupación principal?"
-        ],
-        "$xpath": "hogar/individuo/empleo/ocup_ppal",
-        "relevant": "${ocup} = 1",
-        "$autoname": "ocup_ppal",
-        "# required": "yes",
-        "select_from_list_name": "ocup_ppal"
-      },
-      {
-        "name": "hs_ppal",
-        "type": "integer",
-        "$kuid": "Ux5LDRQnd",
-        "label": [
-          "¿Cuántas horas semanales le dedica a la ocupación principal?"
-        ],
-        "$xpath": "hogar/individuo/empleo/hs_ppal",
-        "relevant": "${ocup} = 1",
-        "$autoname": "hs_ppal",
-        "# required": "yes",
-        "constraint": ". < 120",
-        "constraint_message": "Ingrese un número menor a 120"
-      },
-      {
-        "name": "empleo",
-        "type": "end_group",
-        "$kuid": "WCjeasOd4"
-      },
-      {
-        "name": "eut",
-        "type": "begin_group",
-        "$kuid": "5fwWYaFZH",
-        "label": [
-          "Uso del tiempo"
-        ],
-        "$xpath": "hogar/individuo/eut",
-        "relevant": "${filter_eut} = 1",
-        "$autoname": "eut",
-        "appearance": "field-list"
-      },
-      {
-        "name": "day",
-        "type": "select_one",
-        "$kuid": "uY83EKzag",
-        "label": [
-          "Día de la encuesta"
-        ],
-        "$xpath": "hogar/individuo/eut/day",
-        "$autoname": "day",
-        "# required": "yes",
-        "select_from_list_name": "day"
-      },
-      {
-        "name": "tc",
-        "type": "select_one",
-        "$kuid": "WSGXgrJ1a",
-        "label": [
-          "Durante la última semana, ¿hizo algún trabajo comunitario?"
-        ],
-        "$xpath": "hogar/individuo/eut/tc",
-        "$autoname": "tc",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "hs_tc",
-        "type": "integer",
-        "$kuid": "LMYAKeB5d",
-        "label": [
-          "¿Cuántas horas semanales le dedicó a esa actividad?"
-        ],
-        "$xpath": "hogar/individuo/eut/hs_tc",
-        "relevant": "${tc} = 1",
-        "$autoname": "hs_tc",
-        "# required": "yes"
-      },
-      {
-        "name": "dia_tipico_tc",
-        "type": "select_one",
-        "$kuid": "C003SsFWg",
-        "label": [
-          "En el día de ayer, ¿fue un día típico de trabajo comunitario?"
-        ],
-        "$xpath": "hogar/individuo/eut/dia_tipico_tc",
-        "relevant": "${tc} = 1",
-        "$autoname": "dia_tipico_tc",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "dia_tipico_ocupados",
-        "type": "select_one",
-        "$kuid": "BFtpMRTW9",
-        "label": [
-          "El día de ayer, ¿fue un día típico laborable?"
-        ],
-        "$xpath": "hogar/individuo/eut/dia_tipico_ocupados",
-        "relevant": "${ocup} = 1",
-        "$autoname": "dia_tipico_ocupados",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "día_tipico_inactivos_desempleados",
-        "type": "select_one",
-        "$kuid": "cwd9rqFRQ",
-        "label": [
-          "El día de ayer, ¿fue un día típico no laborable?"
-        ],
-        "$xpath": "hogar/individuo/eut/día_tipico_inactivos_desempleados",
-        "relevant": "${ocup} = 2",
-        "$autoname": "día_tipico_inactivos_desempleados",
-        "# required": "yes",
-        "select_from_list_name": "si_no"
-      },
-      {
-        "name": "filter_eut",
-        "type": "end_group",
-        "$kuid": "Y0Gp69dSK"
-      },
-      {
-        "name": "da",
-        "type": "begin_group",
-        "$kuid": "EM3UeC7D3",
-        "label": [
-          "Diario de Actividades"
-        ],
-        "$xpath": "hogar/individuo/da",
-        "relevant": "${filter_eut} = 1",
-        "$autoname": "da"
-      },
-      {
-        "name": "act_1_0000",
-        "type": "select_one",
-        "$kuid": "exKTnQ6IE",
-        "label": [
-          "Franja 00:00 > 00:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0000",
-        "default": "522",
-        "$autoname": "act_1_0000",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0000",
-        "type": "select_one",
-        "$kuid": "feIi9TEsc",
-        "label": [
-          "Franja 00:00 > 00:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0000",
-        "default": "0",
-        "relevant": "${act_1_0000} != 0",
-        "$autoname": "act_2_0000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0000",
-        "type": "select_one",
-        "$kuid": "6gWHJFi8B",
-        "label": [
-          "Franja 00:00 > 00:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0000",
-        "default": "0",
-        "relevant": "${act_2_0000} != 0",
-        "$autoname": "act_3_0000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0030",
-        "type": "select_one",
-        "$kuid": "UhXLXjKFt",
-        "label": [
-          "Franja 00:30 > 01:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0030",
-        "default": "522",
-        "$autoname": "act_1_0030",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0030",
-        "type": "select_one",
-        "$kuid": "cXx6ZnTCP",
-        "label": [
-          "Franja 00:30 > 01:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0030",
-        "default": "0",
-        "relevant": "${act_1_0030} != 0",
-        "$autoname": "act_2_0030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0030",
-        "type": "select_one",
-        "$kuid": "DTv59Vmbs",
-        "label": [
-          "Franja 00:30 > 01:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0030",
-        "default": "0",
-        "relevant": "${act_2_0030} != 0",
-        "$autoname": "act_3_0030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0100",
-        "type": "select_one",
-        "$kuid": "tPX18ek1A",
-        "label": [
-          "Franja 01:00 > 01:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0100",
-        "default": "522",
-        "$autoname": "act_1_0100",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0100",
-        "type": "select_one",
-        "$kuid": "g9OtdVFsP",
-        "label": [
-          "Franja 01:00 > 01:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0100",
-        "default": "0",
-        "relevant": "${act_1_0100} != 0",
-        "$autoname": "act_2_0100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0100",
-        "type": "select_one",
-        "$kuid": "jns9VTu9b",
-        "label": [
-          "Franja 01:00 > 01:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0100",
-        "default": "0",
-        "relevant": "${act_2_0100} != 0",
-        "$autoname": "act_3_0100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0130",
-        "type": "select_one",
-        "$kuid": "DcWx2MHat",
-        "label": [
-          "Franja 01:30 > 02:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0130",
-        "default": "522",
-        "$autoname": "act_1_0130",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0130",
-        "type": "select_one",
-        "$kuid": "iB1P0TyDP",
-        "label": [
-          "Franja 01:30 > 02:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0130",
-        "default": "0",
-        "relevant": "${act_1_0130} != 0",
-        "$autoname": "act_2_0130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0130",
-        "type": "select_one",
-        "$kuid": "DzKy6Whxu",
-        "label": [
-          "Franja 01:30 > 02:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0130",
-        "default": "0",
-        "relevant": "${act_2_0130} != 0",
-        "$autoname": "act_3_0130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0200",
-        "type": "select_one",
-        "$kuid": "tV1UEOdFO",
-        "label": [
-          "Franja 02:00 > 02:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0200",
-        "default": "522",
-        "$autoname": "act_1_0200",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0200",
-        "type": "select_one",
-        "$kuid": "TUFr3pwVc",
-        "label": [
-          "Franja 02:00 > 02:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0200",
-        "default": "0",
-        "relevant": "${act_1_0200} != 0",
-        "$autoname": "act_2_0200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0200",
-        "type": "select_one",
-        "$kuid": "hkuhUM18y",
-        "label": [
-          "Franja 02:00 > 02:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0200",
-        "default": "0",
-        "relevant": "${act_2_0200} != 0",
-        "$autoname": "act_3_0200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0230",
-        "type": "select_one",
-        "$kuid": "YDMtc61oA",
-        "label": [
-          "Franja 02:30 > 03:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0230",
-        "default": "522",
-        "$autoname": "act_1_0230",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0230",
-        "type": "select_one",
-        "$kuid": "0ODaTVmXH",
-        "label": [
-          "Franja 02:30 > 03:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0230",
-        "default": "0",
-        "relevant": "${act_1_0230} != 0",
-        "$autoname": "act_2_0230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0230",
-        "type": "select_one",
-        "$kuid": "a0jIT3i85",
-        "label": [
-          "Franja 02:30 > 03:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0230",
-        "default": "0",
-        "relevant": "${act_2_0230} != 0",
-        "$autoname": "act_3_0230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0300",
-        "type": "select_one",
-        "$kuid": "dvvz5jXoA",
-        "label": [
-          "Franja 03:00 > 03:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0300",
-        "default": "522",
-        "$autoname": "act_1_0300",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0300",
-        "type": "select_one",
-        "$kuid": "JjQIgwawh",
-        "label": [
-          "Franja 03:00 > 03:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0300",
-        "default": "0",
-        "relevant": "${act_1_0300} != 0",
-        "$autoname": "act_2_0300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0300",
-        "type": "select_one",
-        "$kuid": "RvrwYuw8B",
-        "label": [
-          "Franja 03:00 > 03:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0300",
-        "default": "0",
-        "relevant": "${act_2_0300} != 0",
-        "$autoname": "act_3_0300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0330",
-        "type": "select_one",
-        "$kuid": "vRRMffOU6",
-        "label": [
-          "Franja 03:30 > 04:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0330",
-        "default": "522",
-        "$autoname": "act_1_0330",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0330",
-        "type": "select_one",
-        "$kuid": "OmwWh39Uj",
-        "label": [
-          "Franja 03:30 > 04:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0330",
-        "default": "0",
-        "relevant": "${act_1_0330} != 0",
-        "$autoname": "act_2_0330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0330",
-        "type": "select_one",
-        "$kuid": "dD3rdslkg",
-        "label": [
-          "Franja 03:30 > 04:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0330",
-        "default": "0",
-        "relevant": "${act_2_0330} != 0",
-        "$autoname": "act_3_0330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0400",
-        "type": "select_one",
-        "$kuid": "E7cZZoosU",
-        "label": [
-          "Franja 04:00 > 04:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0400",
-        "default": "522",
-        "$autoname": "act_1_0400",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0400",
-        "type": "select_one",
-        "$kuid": "H4gGVzyuQ",
-        "label": [
-          "Franja 04:00 > 04:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0400",
-        "default": "0",
-        "relevant": "${act_1_0400} != 0",
-        "$autoname": "act_2_0400",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0400",
-        "type": "select_one",
-        "$kuid": "QEnotEdIw",
-        "label": [
-          "Franja 04:00 > 04:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0400",
-        "default": "0",
-        "relevant": "${act_2_0400} != 0",
-        "$autoname": "act_3_0400",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0430",
-        "type": "select_one",
-        "$kuid": "4oGl1Wj8g",
-        "label": [
-          "Franja 04:30 > 05:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0430",
-        "default": "522",
-        "$autoname": "act_1_0430",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0430",
-        "type": "select_one",
-        "$kuid": "A22KucAtA",
-        "label": [
-          "Franja 04:30 > 05:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0430",
-        "default": "0",
-        "relevant": "${act_1_0430} != 0",
-        "$autoname": "act_2_0430",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0430",
-        "type": "select_one",
-        "$kuid": "IPNyUdWan",
-        "label": [
-          "Franja 04:30 > 05:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0430",
-        "default": "0",
-        "relevant": "${act_2_0430} != 0",
-        "$autoname": "act_3_0430",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0500",
-        "type": "select_one",
-        "$kuid": "P1YnExyQa",
-        "label": [
-          "Franja 05:00 > 05:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0500",
-        "default": "522",
-        "$autoname": "act_1_0500",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0500",
-        "type": "select_one",
-        "$kuid": "tdXbaZYE1",
-        "label": [
-          "Franja 05:00 > 05:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0500",
-        "default": "0",
-        "relevant": "${act_1_0500} != 0",
-        "$autoname": "act_2_0500",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0500",
-        "type": "select_one",
-        "$kuid": "AgkO9r4mI",
-        "label": [
-          "Franja 05:00 > 05:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0500",
-        "default": "0",
-        "relevant": "${act_2_0500} != 0",
-        "$autoname": "act_3_0500",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0530",
-        "type": "select_one",
-        "$kuid": "Tn5GUhDU5",
-        "label": [
-          "Franja 05:30 > 06:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0530",
-        "default": "522",
-        "$autoname": "act_1_0530",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0530",
-        "type": "select_one",
-        "$kuid": "il6RZRGkj",
-        "label": [
-          "Franja 05:30 > 06:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0530",
-        "default": "0",
-        "relevant": "${act_1_0530} != 0",
-        "$autoname": "act_2_0530",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0530",
-        "type": "select_one",
-        "$kuid": "pEJPTf1jS",
-        "label": [
-          "Franja 05:30 > 06:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0530",
-        "default": "0",
-        "relevant": "${act_2_0530} != 0",
-        "$autoname": "act_3_0530",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0600",
-        "type": "select_one",
-        "$kuid": "EYv89z8pX",
-        "label": [
-          "Franja 06:00 > 06:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0600",
-        "default": "522",
-        "$autoname": "act_1_0600",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0600",
-        "type": "select_one",
-        "$kuid": "dvxSYuSFs",
-        "label": [
-          "Franja 06:00 > 06:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0600",
-        "default": "0",
-        "relevant": "${act_1_0600} != 0",
-        "$autoname": "act_2_0600",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0600",
-        "type": "select_one",
-        "$kuid": "ZsdLofNR3",
-        "label": [
-          "Franja 06:00 > 06:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0600",
-        "default": "0",
-        "relevant": "${act_2_0600} != 0",
-        "$autoname": "act_3_0600",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0630",
-        "type": "select_one",
-        "$kuid": "NmwKanV7t",
-        "label": [
-          "Franja 06:30 > 07:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0630",
-        "default": "522",
-        "$autoname": "act_1_0630",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0630",
-        "type": "select_one",
-        "$kuid": "75oQIkiE1",
-        "label": [
-          "Franja 06:30 > 07:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0630",
-        "default": "0",
-        "relevant": "${act_1_0630} != 0",
-        "$autoname": "act_2_0630",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0630",
-        "type": "select_one",
-        "$kuid": "e4QVGUHwN",
-        "label": [
-          "Franja 06:30 > 07:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0630",
-        "default": "0",
-        "relevant": "${act_2_0630} != 0",
-        "$autoname": "act_3_0630",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0700",
-        "type": "select_one",
-        "$kuid": "iGOqbyMEk",
-        "label": [
-          "Franja 07:00 > 07:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0700",
-        "$autoname": "act_1_0700",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0700",
-        "type": "select_one",
-        "$kuid": "MI4niOwmq",
-        "label": [
-          "Franja 07:00 > 07:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0700",
-        "default": "0",
-        "relevant": "${act_1_0700} != 0",
-        "$autoname": "act_2_0700",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0700",
-        "type": "select_one",
-        "$kuid": "TtzAn220B",
-        "label": [
-          "Franja 07:00 > 07:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0700",
-        "default": "0",
-        "relevant": "${act_2_0700} != 0",
-        "$autoname": "act_3_0700",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0730",
-        "type": "select_one",
-        "$kuid": "HPxumQXUG",
-        "label": [
-          "Franja 07:30 > 08:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0730",
-        "$autoname": "act_1_0730",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0730",
-        "type": "select_one",
-        "$kuid": "gSUygySn5",
-        "label": [
-          "Franja 07:30 > 08:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0730",
-        "default": "0",
-        "relevant": "${act_1_0730} != 0",
-        "$autoname": "act_2_0730",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0730",
-        "type": "select_one",
-        "$kuid": "syMmRZD3F",
-        "label": [
-          "Franja 07:30 > 08:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0730",
-        "default": "0",
-        "relevant": "${act_2_0730} != 0",
-        "$autoname": "act_3_0730",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0800",
-        "type": "select_one",
-        "$kuid": "LFg8NG4WF",
-        "label": [
-          "Franja 08:00 > 08:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0800",
-        "$autoname": "act_1_0800",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0800",
-        "type": "select_one",
-        "$kuid": "h3uEIu7xN",
-        "label": [
-          "Franja 08:00 > 08:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0800",
-        "default": "0",
-        "relevant": "${act_1_0800} != 0",
-        "$autoname": "act_2_0800",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0800",
-        "type": "select_one",
-        "$kuid": "DbXQNYh4X",
-        "label": [
-          "Franja 08:00 > 08:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0800",
-        "default": "0",
-        "relevant": "${act_2_0800} != 0",
-        "$autoname": "act_3_0800",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0830",
-        "type": "select_one",
-        "$kuid": "OJyrWK2X8",
-        "label": [
-          "Franja 08:30 > 09:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0830",
-        "$autoname": "act_1_0830",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0830",
-        "type": "select_one",
-        "$kuid": "Utb0Ouo84",
-        "label": [
-          "Franja 08:30 > 09:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0830",
-        "default": "0",
-        "relevant": "${act_1_0830} != 0",
-        "$autoname": "act_2_0830",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0830",
-        "type": "select_one",
-        "$kuid": "GnkoF1tK5",
-        "label": [
-          "Franja 08:30 > 09:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0830",
-        "default": "0",
-        "relevant": "${act_2_0830} != 0",
-        "$autoname": "act_3_0830",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0900",
-        "type": "select_one",
-        "$kuid": "HJZpPjCSR",
-        "label": [
-          "Franja 09:00 > 09:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0900",
-        "$autoname": "act_1_0900",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0900",
-        "type": "select_one",
-        "$kuid": "8kRd27ybv",
-        "label": [
-          "Franja 09:00 > 09:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0900",
-        "default": "0",
-        "relevant": "${act_1_0900} != 0",
-        "$autoname": "act_2_0900",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0900",
-        "type": "select_one",
-        "$kuid": "nhft69Q0f",
-        "label": [
-          "Franja 09:00 > 09:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0900",
-        "default": "0",
-        "relevant": "${act_2_0900} != 0",
-        "$autoname": "act_3_0900",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_0930",
-        "type": "select_one",
-        "$kuid": "u5wLk2cS6",
-        "label": [
-          "Franja 09:30 > 10:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_0930",
-        "$autoname": "act_1_0930",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_0930",
-        "type": "select_one",
-        "$kuid": "vZDJzUf2u",
-        "label": [
-          "Franja 09:30 > 10:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_0930",
-        "default": "0",
-        "relevant": "${act_1_0930} != 0",
-        "$autoname": "act_2_0930",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_0930",
-        "type": "select_one",
-        "$kuid": "iioQbZTMh",
-        "label": [
-          "Franja 09:30 > 10:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_0930",
-        "default": "0",
-        "relevant": "${act_2_0930} != 0",
-        "$autoname": "act_3_0930",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1000",
-        "type": "select_one",
-        "$kuid": "OY6g0a729",
-        "label": [
-          "Franja 10:00 > 10:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1000",
-        "$autoname": "act_1_1000",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1000",
-        "type": "select_one",
-        "$kuid": "m4MM7g1Ux",
-        "label": [
-          "Franja 10:00 > 10:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1000",
-        "default": "0",
-        "relevant": "${act_1_1000} != 0",
-        "$autoname": "act_2_1000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1000",
-        "type": "select_one",
-        "$kuid": "6gNnj1LIq",
-        "label": [
-          "Franja 10:00 > 10:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1000",
-        "default": "0",
-        "relevant": "${act_2_1000} != 0",
-        "$autoname": "act_3_1000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1030",
-        "type": "select_one",
-        "$kuid": "BmQ80mrbb",
-        "label": [
-          "Franja 10:30 > 11:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1030",
-        "$autoname": "act_1_1030",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1030",
-        "type": "select_one",
-        "$kuid": "wUuSzdnqG",
-        "label": [
-          "Franja 10:30 > 11:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1030",
-        "default": "0",
-        "relevant": "${act_1_1030} != 0",
-        "$autoname": "act_2_1030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1030",
-        "type": "select_one",
-        "$kuid": "xgJKNLvVi",
-        "label": [
-          "Franja 10:30 > 11:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1030",
-        "default": "0",
-        "relevant": "${act_2_1030} != 0",
-        "$autoname": "act_3_1030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1100",
-        "type": "select_one",
-        "$kuid": "mAk8fSLYf",
-        "label": [
-          "Franja 11:00 > 11:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1100",
-        "$autoname": "act_1_1100",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1100",
-        "type": "select_one",
-        "$kuid": "PKJpwFtUe",
-        "label": [
-          "Franja 11:00 > 11:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1100",
-        "default": "0",
-        "relevant": "${act_1_1100} != 0",
-        "$autoname": "act_2_1100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1100",
-        "type": "select_one",
-        "$kuid": "cd4cTUDk6",
-        "label": [
-          "Franja 11:00 > 11:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1100",
-        "default": "0",
-        "relevant": "${act_2_1100} != 0",
-        "$autoname": "act_3_1100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1130",
-        "type": "select_one",
-        "$kuid": "WYtedBiv0",
-        "label": [
-          "Franja 11:30 > 12:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1130",
-        "$autoname": "act_1_1130",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1130",
-        "type": "select_one",
-        "$kuid": "KKq8QeMWg",
-        "label": [
-          "Franja 11:30 > 12:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1130",
-        "default": "0",
-        "relevant": "${act_1_1130} != 0",
-        "$autoname": "act_2_1130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1130",
-        "type": "select_one",
-        "$kuid": "AbwDqml7l",
-        "label": [
-          "Franja 11:30 > 12:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1130",
-        "default": "0",
-        "relevant": "${act_2_1130} != 0",
-        "$autoname": "act_3_1130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1200",
-        "type": "select_one",
-        "$kuid": "IB9Ngljpj",
-        "label": [
-          "Franja 12:00 > 12:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1200",
-        "$autoname": "act_1_1200",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1200",
-        "type": "select_one",
-        "$kuid": "u8y7FSOAx",
-        "label": [
-          "Franja 12:00 > 12:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1200",
-        "default": "0",
-        "relevant": "${act_1_1200} != 0",
-        "$autoname": "act_2_1200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1200",
-        "type": "select_one",
-        "$kuid": "KCiLUPvbi",
-        "label": [
-          "Franja 12:00 > 12:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1200",
-        "default": "0",
-        "relevant": "${act_2_1200} != 0",
-        "$autoname": "act_3_1200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1230",
-        "type": "select_one",
-        "$kuid": "9uyzpLu9d",
-        "label": [
-          "Franja 12:30 > 13:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1230",
-        "$autoname": "act_1_1230",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1230",
-        "type": "select_one",
-        "$kuid": "QSCYWf6BK",
-        "label": [
-          "Franja 12:30 > 13:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1230",
-        "default": "0",
-        "relevant": "${act_1_1230} != 0",
-        "$autoname": "act_2_1230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1230",
-        "type": "select_one",
-        "$kuid": "S6qeqBMW2",
-        "label": [
-          "Franja 12:30 > 13:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1230",
-        "default": "0",
-        "relevant": "${act_2_1230} != 0",
-        "$autoname": "act_3_1230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1300",
-        "type": "select_one",
-        "$kuid": "6QX2F0m5c",
-        "label": [
-          "Franja 13:00 > 13:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1300",
-        "$autoname": "act_1_1300",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1300",
-        "type": "select_one",
-        "$kuid": "KCxKcgqTG",
-        "label": [
-          "Franja 13:00 > 13:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1300",
-        "default": "0",
-        "relevant": "${act_1_1300} != 0",
-        "$autoname": "act_2_1300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1300",
-        "type": "select_one",
-        "$kuid": "n3YUqImuI",
-        "label": [
-          "Franja 13:00 > 13:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1300",
-        "default": "0",
-        "relevant": "${act_2_1300} != 0",
-        "$autoname": "act_3_1300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1330",
-        "type": "select_one",
-        "$kuid": "eoUlPuj39",
-        "label": [
-          "Franja 13:30 > 14:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1330",
-        "$autoname": "act_1_1330",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1330",
-        "type": "select_one",
-        "$kuid": "zMfA2omSL",
-        "label": [
-          "Franja 13:30 > 14:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1330",
-        "default": "0",
-        "relevant": "${act_1_1330} != 0",
-        "$autoname": "act_2_1330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1330",
-        "type": "select_one",
-        "$kuid": "O29n68zLU",
-        "label": [
-          "Franja 13:30 > 14:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1330",
-        "default": "0",
-        "relevant": "${act_2_1330} != 0",
-        "$autoname": "act_3_1330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1400",
-        "type": "select_one",
-        "$kuid": "sXIaxxF9r",
-        "label": [
-          "Franja 14:00 > 14:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1400",
-        "$autoname": "act_1_1400",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1400",
-        "type": "select_one",
-        "$kuid": "PRbnMTBo1",
-        "label": [
-          "Franja 14:00 > 14:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1400",
-        "default": "0",
-        "relevant": "${act_1_1400} != 0",
-        "$autoname": "act_2_1400",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1400",
-        "type": "select_one",
-        "$kuid": "fkyi7W05r",
-        "label": [
-          "Franja 14:00 > 14:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1400",
-        "default": "0",
-        "relevant": "${act_2_1400} != 0",
-        "$autoname": "act_3_1400",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1430",
-        "type": "select_one",
-        "$kuid": "srF3nz2ol",
-        "label": [
-          "Franja 14:30 > 15:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1430",
-        "$autoname": "act_1_1430",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1430",
-        "type": "select_one",
-        "$kuid": "arEHrXWaW",
-        "label": [
-          "Franja 14:30 > 15:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1430",
-        "default": "0",
-        "relevant": "${act_1_1430} != 0",
-        "$autoname": "act_2_1430",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1430",
-        "type": "select_one",
-        "$kuid": "hv9vnKsEp",
-        "label": [
-          "Franja 14:30 > 15:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1430",
-        "default": "0",
-        "relevant": "${act_2_1430} != 0",
-        "$autoname": "act_3_1430",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1500",
-        "type": "select_one",
-        "$kuid": "crEFDDOgh",
-        "label": [
-          "Franja 15:00 > 15:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1500",
-        "$autoname": "act_1_1500",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1500",
-        "type": "select_one",
-        "$kuid": "sYyQc2x8W",
-        "label": [
-          "Franja 15:00 > 15:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1500",
-        "default": "0",
-        "relevant": "${act_1_1500} != 0",
-        "$autoname": "act_2_1500",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1500",
-        "type": "select_one",
-        "$kuid": "aXB7yCVht",
-        "label": [
-          "Franja 15:00 > 15:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1500",
-        "default": "0",
-        "relevant": "${act_2_1500} != 0",
-        "$autoname": "act_3_1500",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1530",
-        "type": "select_one",
-        "$kuid": "iEFYYmJRm",
-        "label": [
-          "Franja 15:30 > 16:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1530",
-        "$autoname": "act_1_1530",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1530",
-        "type": "select_one",
-        "$kuid": "jg7Zfcwxc",
-        "label": [
-          "Franja 15:30 > 16:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1530",
-        "default": "0",
-        "relevant": "${act_1_1530} != 0",
-        "$autoname": "act_2_1530",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1530",
-        "type": "select_one",
-        "$kuid": "EAvZu3V26",
-        "label": [
-          "Franja 15:30 > 16:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1530",
-        "default": "0",
-        "relevant": "${act_2_1530} != 0",
-        "$autoname": "act_3_1530",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1600",
-        "type": "select_one",
-        "$kuid": "2YQ0UpvAY",
-        "label": [
-          "Franja 16:00 > 16:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1600",
-        "$autoname": "act_1_1600",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1600",
-        "type": "select_one",
-        "$kuid": "WsyaZq2vA",
-        "label": [
-          "Franja 16:00 > 16:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1600",
-        "default": "0",
-        "relevant": "${act_1_1600} != 0",
-        "$autoname": "act_2_1600",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1600",
-        "type": "select_one",
-        "$kuid": "OwJf6NhNm",
-        "label": [
-          "Franja 16:00 > 16:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1600",
-        "default": "0",
-        "relevant": "${act_2_1600} != 0",
-        "$autoname": "act_3_1600",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1630",
-        "type": "select_one",
-        "$kuid": "2AbiwWI6N",
-        "label": [
-          "Franja 16:30 > 17:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1630",
-        "$autoname": "act_1_1630",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1630",
-        "type": "select_one",
-        "$kuid": "GLAoNLOFf",
-        "label": [
-          "Franja 16:30 > 17:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1630",
-        "default": "0",
-        "relevant": "${act_1_1630} != 0",
-        "$autoname": "act_2_1630",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1630",
-        "type": "select_one",
-        "$kuid": "Yh9zSAaGc",
-        "label": [
-          "Franja 16:30 > 17:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1630",
-        "default": "0",
-        "relevant": "${act_2_1630} != 0",
-        "$autoname": "act_3_1630",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1700",
-        "type": "select_one",
-        "$kuid": "g7IZsVty8",
-        "label": [
-          "Franja 17:00 > 17:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1700",
-        "$autoname": "act_1_1700",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1700",
-        "type": "select_one",
-        "$kuid": "srJbeGpqm",
-        "label": [
-          "Franja 17:00 > 17:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1700",
-        "default": "0",
-        "relevant": "${act_1_1700} != 0",
-        "$autoname": "act_2_1700",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1700",
-        "type": "select_one",
-        "$kuid": "xQuorOoHf",
-        "label": [
-          "Franja 17:00 > 17:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1700",
-        "default": "0",
-        "relevant": "${act_2_1700} != 0",
-        "$autoname": "act_3_1700",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1730",
-        "type": "select_one",
-        "$kuid": "rWL2lkPwG",
-        "label": [
-          "Franja 17:30 > 18:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1730",
-        "$autoname": "act_1_1730",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1730",
-        "type": "select_one",
-        "$kuid": "qqseX38R3",
-        "label": [
-          "Franja 17:30 > 18:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1730",
-        "default": "0",
-        "relevant": "${act_1_1730} != 0",
-        "$autoname": "act_2_1730",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1730",
-        "type": "select_one",
-        "$kuid": "shifp8wEo",
-        "label": [
-          "Franja 17:30 > 18:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1730",
-        "default": "0",
-        "relevant": "${act_2_1730} != 0",
-        "$autoname": "act_3_1730",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1800",
-        "type": "select_one",
-        "$kuid": "RHikFO9is",
-        "label": [
-          "Franja 18:00 > 18:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1800",
-        "$autoname": "act_1_1800",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1800",
-        "type": "select_one",
-        "$kuid": "z4v4EgYD7",
-        "label": [
-          "Franja 18:00 > 18:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1800",
-        "default": "0",
-        "relevant": "${act_1_1800} != 0",
-        "$autoname": "act_2_1800",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1800",
-        "type": "select_one",
-        "$kuid": "z9MusliwM",
-        "label": [
-          "Franja 18:00 > 18:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1800",
-        "default": "0",
-        "relevant": "${act_2_1800} != 0",
-        "$autoname": "act_3_1800",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1830",
-        "type": "select_one",
-        "$kuid": "O8qKfUQgz",
-        "label": [
-          "Franja 18:30 > 19:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1830",
-        "$autoname": "act_1_1830",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1830",
-        "type": "select_one",
-        "$kuid": "KQEat30yW",
-        "label": [
-          "Franja 18:30 > 19:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1830",
-        "default": "0",
-        "relevant": "${act_1_1830} != 0",
-        "$autoname": "act_2_1830",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1830",
-        "type": "select_one",
-        "$kuid": "Rd87f0qeU",
-        "label": [
-          "Franja 18:30 > 19:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1830",
-        "default": "0",
-        "relevant": "${act_2_1830} != 0",
-        "$autoname": "act_3_1830",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1900",
-        "type": "select_one",
-        "$kuid": "N9GMCINLT",
-        "label": [
-          "Franja 19:00 > 19:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1900",
-        "$autoname": "act_1_1900",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1900",
-        "type": "select_one",
-        "$kuid": "UJZQl3g7Y",
-        "label": [
-          "Franja 19:00 > 19:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1900",
-        "default": "0",
-        "relevant": "${act_1_1900} != 0",
-        "$autoname": "act_2_1900",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1900",
-        "type": "select_one",
-        "$kuid": "636iCdqIa",
-        "label": [
-          "Franja 19:00 > 19:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1900",
-        "default": "0",
-        "relevant": "${act_2_1900} != 0",
-        "$autoname": "act_3_1900",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_1930",
-        "type": "select_one",
-        "$kuid": "OY7uWvfEg",
-        "label": [
-          "Franja 19:30 > 20:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_1930",
-        "$autoname": "act_1_1930",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_1930",
-        "type": "select_one",
-        "$kuid": "W2sVEWUhd",
-        "label": [
-          "Franja 19:30 > 20:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_1930",
-        "default": "0",
-        "relevant": "${act_1_1930} != 0",
-        "$autoname": "act_2_1930",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_1930",
-        "type": "select_one",
-        "$kuid": "Wu1fIK14O",
-        "label": [
-          "Franja 19:30 > 20:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_1930",
-        "default": "0",
-        "relevant": "${act_2_1930} != 0",
-        "$autoname": "act_3_1930",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2000",
-        "type": "select_one",
-        "$kuid": "JcuLEZPTZ",
-        "label": [
-          "Franja 20:00 > 20:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2000",
-        "$autoname": "act_1_2000",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2000",
-        "type": "select_one",
-        "$kuid": "kyhXlnUd5",
-        "label": [
-          "Franja 20:00 > 20:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2000",
-        "default": "0",
-        "relevant": "${act_1_2000} != 0",
-        "$autoname": "act_2_2000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2000",
-        "type": "select_one",
-        "$kuid": "sWPaUnYoP",
-        "label": [
-          "Franja 20:00 > 20:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2000",
-        "default": "0",
-        "relevant": "${act_2_2000} != 0",
-        "$autoname": "act_3_2000",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2030",
-        "type": "select_one",
-        "$kuid": "QWpx9EB1c",
-        "label": [
-          "Franja 20:30 > 21:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2030",
-        "$autoname": "act_1_2030",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2030",
-        "type": "select_one",
-        "$kuid": "1bEjKQZYl",
-        "label": [
-          "Franja 20:30 > 21:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2030",
-        "default": "0",
-        "relevant": "${act_1_2030} != 0",
-        "$autoname": "act_2_2030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2030",
-        "type": "select_one",
-        "$kuid": "RKHQcP85A",
-        "label": [
-          "Franja 20:30 > 21:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2030",
-        "default": "0",
-        "relevant": "${act_2_2030} != 0",
-        "$autoname": "act_3_2030",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2100",
-        "type": "select_one",
-        "$kuid": "At8V04H5t",
-        "label": [
-          "Franja 21:00 > 21:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2100",
-        "$autoname": "act_1_2100",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2100",
-        "type": "select_one",
-        "$kuid": "z4IrJSNHZ",
-        "label": [
-          "Franja 21:00 > 21:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2100",
-        "default": "0",
-        "relevant": "${act_1_2100} != 0",
-        "$autoname": "act_2_2100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2100",
-        "type": "select_one",
-        "$kuid": "Aioj894Ml",
-        "label": [
-          "Franja 21:00 > 21:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2100",
-        "default": "0",
-        "relevant": "${act_2_2100} != 0",
-        "$autoname": "act_3_2100",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2130",
-        "type": "select_one",
-        "$kuid": "uhflAHs1K",
-        "label": [
-          "Franja 21:30 > 22:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2130",
-        "$autoname": "act_1_2130",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2130",
-        "type": "select_one",
-        "$kuid": "JlJlIzLHD",
-        "label": [
-          "Franja 21:30 > 22:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2130",
-        "default": "0",
-        "relevant": "${act_1_2130} != 0",
-        "$autoname": "act_2_2130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2130",
-        "type": "select_one",
-        "$kuid": "a61v2Iw2c",
-        "label": [
-          "Franja 21:30 > 22:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2130",
-        "default": "0",
-        "relevant": "${act_2_2130} != 0",
-        "$autoname": "act_3_2130",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2200",
-        "type": "select_one",
-        "$kuid": "vmc69JOIH",
-        "label": [
-          "Franja 22:00 > 22:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2200",
-        "$autoname": "act_1_2200",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2200",
-        "type": "select_one",
-        "$kuid": "RyTgIZ7MZ",
-        "label": [
-          "Franja 22:00 > 22:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2200",
-        "default": "0",
-        "relevant": "${act_1_2200} != 0",
-        "$autoname": "act_2_2200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2200",
-        "type": "select_one",
-        "$kuid": "qeE5rwRfI",
-        "label": [
-          "Franja 22:00 > 22:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2200",
-        "default": "0",
-        "relevant": "${act_2_2200} != 0",
-        "$autoname": "act_3_2200",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2230",
-        "type": "select_one",
-        "$kuid": "V4BaAB1fk",
-        "label": [
-          "Franja 22:30 > 23:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2230",
-        "$autoname": "act_1_2230",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2230",
-        "type": "select_one",
-        "$kuid": "IXXL9YubN",
-        "label": [
-          "Franja 22:30 > 23:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2230",
-        "default": "0",
-        "relevant": "${act_1_2230} != 0",
-        "$autoname": "act_2_2230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2230",
-        "type": "select_one",
-        "$kuid": "Lqgz2UfVY",
-        "label": [
-          "Franja 22:30 > 23:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2230",
-        "default": "0",
-        "relevant": "${act_2_2230} != 0",
-        "$autoname": "act_3_2230",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2300",
-        "type": "select_one",
-        "$kuid": "fTsHh7Zxd",
-        "label": [
-          "Franja 23:00 > 23:30 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2300",
-        "$autoname": "act_1_2300",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2300",
-        "type": "select_one",
-        "$kuid": "sK8KmB96M",
-        "label": [
-          "Franja 23:00 > 23:30 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2300",
-        "default": "0",
-        "relevant": "${act_1_2300} != 0",
-        "$autoname": "act_2_2300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2300",
-        "type": "select_one",
-        "$kuid": "r0JVoKjmw",
-        "label": [
-          "Franja 23:00 > 23:30 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2300",
-        "default": "0",
-        "relevant": "${act_2_2300} != 0",
-        "$autoname": "act_3_2300",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_1_2330",
-        "type": "select_one",
-        "$kuid": "YNxT6S4Bx",
-        "label": [
-          "Franja 23:30 > 00:00 > Actividad 1"
-        ],
-        "$xpath": "hogar/individuo/da/act_1_2330",
-        "$autoname": "act_1_2330",
-        "# required": "yes",
-        "appearance": "autocomplete",
-        "constraint": ". != '0'",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_2_2330",
-        "type": "select_one",
-        "$kuid": "XniwmsMCl",
-        "label": [
-          "Franja 23:30 > 00:00 > Actividad 2"
-        ],
-        "$xpath": "hogar/individuo/da/act_2_2330",
-        "default": "0",
-        "relevant": "${act_1_2330} != 0",
-        "$autoname": "act_2_2330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "act_3_2330",
-        "type": "select_one",
-        "$kuid": "aFXN57XSX",
-        "label": [
-          "Franja 23:30 > 00:00 > Actividad 3"
-        ],
-        "$xpath": "hogar/individuo/da/act_3_2330",
-        "default": "0",
-        "relevant": "${act_2_2330} != 0",
-        "$autoname": "act_3_2330",
-        "appearance": "autocomplete",
-        "select_from_list_name": "actividades"
-      },
-      {
-        "name": "da",
-        "type": "end_group",
-        "$kuid": "ynL8nYj88"
+        "$kuid": "aj0F35AX4"
       },
       {
         "type": "end_repeat",
-        "$kuid": "y4NhwXa0Q"
+        "$kuid": "EsjjjOyNs"
       },
       {
         "type": "end_repeat",
-        "$kuid": "Pf7oIlZAa"
+        "$kuid": "kieZRrGwC"
       }
     ],
     "choices": [
       {
         "name": "1",
-        "$kuid": "RZvyRRpJT",
-        "label": [
-          "Sí"
-        ],
-        "list_name": "si_no",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "XO2cnz34C",
-        "label": [
-          "No"
-        ],
-        "list_name": "si_no",
-        "$autovalue": "2"
-      },
-      {
-        "name": "1",
-        "$kuid": "2VsSFSd9L",
-        "label": [
-          "Propietario"
-        ],
-        "list_name": "tenencia",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "y87dj69tJ",
-        "label": [
-          "Inquilino"
-        ],
-        "list_name": "tenencia",
-        "$autovalue": "2"
-      },
-      {
-        "name": "3",
-        "$kuid": "bIQzUoBus",
-        "label": [
-          "Ocupante por préstamo, cesión o permiso"
-        ],
-        "list_name": "tenencia",
-        "$autovalue": "3"
-      },
-      {
-        "name": "4",
-        "$kuid": "I3MxKMciZ",
-        "label": [
-          "Ocupante de hecho"
-        ],
-        "list_name": "tenencia",
-        "$autovalue": "4"
-      },
-      {
-        "name": "5",
-        "$kuid": "VZ0Gnf3CL",
-        "label": [
-          "Ocupante en relación de dependencia o trabajo"
-        ],
-        "list_name": "tenencia",
-        "$autovalue": "5"
-      },
-      {
-        "name": "1",
-        "$kuid": "HPlpPh4ft",
+        "$kuid": "tcInpxGo8",
         "label": [
           "Masculino"
         ],
@@ -3218,7 +393,7 @@
       },
       {
         "name": "2",
-        "$kuid": "h576bEcnI",
+        "$kuid": "FZGDO2J7u",
         "label": [
           "Femenino"
         ],
@@ -3227,7 +402,7 @@
       },
       {
         "name": "1",
-        "$kuid": "tXLOJIPEs",
+        "$kuid": "s819owaG6",
         "label": [
           "Hombre"
         ],
@@ -3236,7 +411,7 @@
       },
       {
         "name": "2",
-        "$kuid": "pviri30XW",
+        "$kuid": "YYOchcpHO",
         "label": [
           "Mujer"
         ],
@@ -3245,7 +420,7 @@
       },
       {
         "name": "3",
-        "$kuid": "sGUbIzl5L",
+        "$kuid": "Dx03yJlij",
         "label": [
           "Otro"
         ],
@@ -3254,7 +429,7 @@
       },
       {
         "name": "4",
-        "$kuid": "2ORlgKT0b",
+        "$kuid": "Yn9eaL4bL",
         "label": [
           "Prefiere no decir"
         ],
@@ -3263,7 +438,7 @@
       },
       {
         "name": "1",
-        "$kuid": "LByF4edOD",
+        "$kuid": "lLTsNm31B",
         "label": [
           "Jefe/a"
         ],
@@ -3272,7 +447,7 @@
       },
       {
         "name": "2",
-        "$kuid": "aePHphC5o",
+        "$kuid": "be2etpOJa",
         "label": [
           "Cónyuge/pareja"
         ],
@@ -3281,7 +456,7 @@
       },
       {
         "name": "3",
-        "$kuid": "hcrQrlaLc",
+        "$kuid": "PylmuhEYg",
         "label": [
           "Hijo/a"
         ],
@@ -3290,7 +465,7 @@
       },
       {
         "name": "4",
-        "$kuid": "E6C5enQSP",
+        "$kuid": "Ylld0Cfxn",
         "label": [
           "Hijastro/a"
         ],
@@ -3299,7 +474,7 @@
       },
       {
         "name": "5",
-        "$kuid": "KKAo7jpvz",
+        "$kuid": "rmquZIm5I",
         "label": [
           "Yerno/nuera"
         ],
@@ -3308,7 +483,7 @@
       },
       {
         "name": "6",
-        "$kuid": "Xov6K90DI",
+        "$kuid": "W4ytoqTMV",
         "label": [
           "Nieto/a"
         ],
@@ -3317,7 +492,7 @@
       },
       {
         "name": "7",
-        "$kuid": "ttxybHjYg",
+        "$kuid": "mFLimVgbx",
         "label": [
           "Padre o madre"
         ],
@@ -3326,7 +501,7 @@
       },
       {
         "name": "8",
-        "$kuid": "TwFZQCFaG",
+        "$kuid": "HpL5pe3rK",
         "label": [
           "Suegro/a"
         ],
@@ -3335,7 +510,7 @@
       },
       {
         "name": "9",
-        "$kuid": "sFtFV3KCF",
+        "$kuid": "7r4XAeYLY",
         "label": [
           "Hermano/a"
         ],
@@ -3344,7 +519,7 @@
       },
       {
         "name": "10",
-        "$kuid": "gTPgjc65k",
+        "$kuid": "1NZWob7qD",
         "label": [
           "Cuñado/a"
         ],
@@ -3353,7 +528,7 @@
       },
       {
         "name": "11",
-        "$kuid": "s0XviLbpv",
+        "$kuid": "tYrOuhjLY",
         "label": [
           "Sobrino/a"
         ],
@@ -3362,7 +537,7 @@
       },
       {
         "name": "12",
-        "$kuid": "AuIXGbaIj",
+        "$kuid": "fyji87XoM",
         "label": [
           "Abuelo/a"
         ],
@@ -3371,7 +546,7 @@
       },
       {
         "name": "13",
-        "$kuid": "1hZIopWMR",
+        "$kuid": "pN8dA25so",
         "label": [
           "Otro familiar"
         ],
@@ -3380,7 +555,7 @@
       },
       {
         "name": "14",
-        "$kuid": "88YTalABW",
+        "$kuid": "wTWhAOstu",
         "label": [
           "Otro no familiar"
         ],
@@ -3389,160 +564,7 @@
       },
       {
         "name": "1",
-        "$kuid": "x0vb9oQWb",
-        "label": [
-          "No deseaba/no quería trabajar"
-        ],
-        "list_name": "motivo_no_trab",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "7jnZ89imL",
-        "label": [
-          "No podía trabajar"
-        ],
-        "list_name": "motivo_no_trab",
-        "$autovalue": "2"
-      },
-      {
-        "name": "3",
-        "$kuid": "TsDXPa9jz",
-        "label": [
-          "No tenía/no conseguía trabajo"
-        ],
-        "list_name": "motivo_no_trab",
-        "$autovalue": "3"
-      },
-      {
-        "name": "4",
-        "$kuid": "qiK5XFCpC",
-        "label": [
-          "No tuvo pedidos/clientes"
-        ],
-        "list_name": "motivo_no_trab",
-        "$autovalue": "4"
-      },
-      {
-        "name": "5",
-        "$kuid": "vW5ZT0JJa",
-        "label": [
-          "Tenía un trabajo pero no concurrió"
-        ],
-        "list_name": "motivo_no_trab",
-        "$autovalue": "5"
-      },
-      {
-        "name": "1",
-        "$kuid": "mUJpsEPjR",
-        "label": [
-          "Se dedica a tareas del hogar"
-        ],
-        "list_name": "no_trab",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "Rz4OWkOI7",
-        "label": [
-          "Tuvo que cuidar algún familiar"
-        ],
-        "list_name": "no_trab",
-        "$autovalue": "2"
-      },
-      {
-        "name": "3",
-        "$kuid": "DqKujtw5N",
-        "label": [
-          "Otras razones"
-        ],
-        "list_name": "no_trab",
-        "$autovalue": "3"
-      },
-      {
-        "name": "1",
-        "$kuid": "UHSQhPdfb",
-        "label": [
-          "Empleado/a formal o registrado (en blanco)"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "jlBHHyOC0",
-        "label": [
-          "Empleado/a informal o no registrado (en negro)"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "2"
-      },
-      {
-        "name": "3",
-        "$kuid": "VhhNsT7vw",
-        "label": [
-          "Trabajador independiente, negocio propio o familiar"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "3"
-      },
-      {
-        "name": "4",
-        "$kuid": "FE7l5Q6Lc",
-        "label": [
-          "Trabajador/a de una cooperativa"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "4"
-      },
-      {
-        "name": "5",
-        "$kuid": "OpT05YbAN",
-        "label": [
-          "Trabajo comunitario con contraprestación (VAT, PT, SSC)"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "5"
-      },
-      {
-        "name": "6",
-        "$kuid": "AJbhPTxce",
-        "label": [
-          "Trabajo comunitario con contraprestación en especie"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "6"
-      },
-      {
-        "name": "7",
-        "$kuid": "XeNTTeaw0",
-        "label": [
-          "Trabajo comunitario sin contraprestación"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "7"
-      },
-      {
-        "name": "8",
-        "$kuid": "URMZY3t2I",
-        "label": [
-          "Trabajo como empleador"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "8"
-      },
-      {
-        "name": "9",
-        "$kuid": "5NV4wz37Z",
-        "label": [
-          "Empleado/a de casas particulares"
-        ],
-        "list_name": "ocup_ppal",
-        "$autovalue": "9"
-      },
-      {
-        "name": "1",
-        "$kuid": "t8qD95fgW",
+        "$kuid": "phr3sBTrq",
         "label": [
           "ejemplo"
         ],
@@ -3551,7 +573,7 @@
       },
       {
         "name": "1",
-        "$kuid": "xv4XtvND4",
+        "$kuid": "3TH3PgzxK",
         "label": [
           "ejemplo"
         ],
@@ -3560,558 +582,18 @@
       },
       {
         "name": "1",
-        "$kuid": "bzdxCcdvK",
+        "$kuid": "PD5cj0Rln",
         "label": [
           "ejemplo"
         ],
         "list_name": "nivel_educ",
         "$autovalue": "1"
-      },
-      {
-        "name": "1",
-        "$kuid": "RBLsTp2kj",
-        "label": [
-          "Lunes"
-        ],
-        "list_name": "day",
-        "$autovalue": "1"
-      },
-      {
-        "name": "2",
-        "$kuid": "h54kypIAW",
-        "label": [
-          "Martes"
-        ],
-        "list_name": "day",
-        "$autovalue": "2"
-      },
-      {
-        "name": "3",
-        "$kuid": "V033a3pNf",
-        "label": [
-          "Miércoles"
-        ],
-        "list_name": "day",
-        "$autovalue": "3"
-      },
-      {
-        "name": "4",
-        "$kuid": "MOAX0vBln",
-        "label": [
-          "Jueves"
-        ],
-        "list_name": "day",
-        "$autovalue": "4"
-      },
-      {
-        "name": "5",
-        "$kuid": "Of5ebVRaq",
-        "label": [
-          "Viernes"
-        ],
-        "list_name": "day",
-        "$autovalue": "5"
-      },
-      {
-        "name": "6",
-        "$kuid": "3bTOuQ1Eu",
-        "label": [
-          "Sábado"
-        ],
-        "list_name": "day",
-        "$autovalue": "6"
-      },
-      {
-        "name": "7",
-        "$kuid": "OPx4U4kab",
-        "label": [
-          "Domingo"
-        ],
-        "list_name": "day",
-        "$autovalue": "7"
-      },
-      {
-        "name": "11",
-        "$kuid": "e1DM5H2h0",
-        "label": [
-          "Trabajo - 11 - Trabajar en una ocupación"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "11"
-      },
-      {
-        "name": "12",
-        "$kuid": "BFcJP0MwZ",
-        "label": [
-          "Trabajo - 12 - Realizar una pasantía no remunerada"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "12"
-      },
-      {
-        "name": "13",
-        "$kuid": "qzW2BJmdv",
-        "label": [
-          "Trabajo - 13 - Buscar trabajo o iniciar un negocio"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "13"
-      },
-      {
-        "name": "14",
-        "$kuid": "VUEJftbqw",
-        "label": [
-          "Trabajo - 14 - Viajar para y volver del trabajo"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "14"
-      },
-      {
-        "name": "2",
-        "$kuid": "BslSKHJns",
-        "label": [
-          "Trabajo - 2 - Trabajar para consumo propio del hogar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "2"
-      },
-      {
-        "name": "411",
-        "$kuid": "qwar4PNN3",
-        "label": [
-          "Cuidado - 411 - Cuidado permanente y apoyo a miembros del hogar de 0 a 14 años"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "411"
-      },
-      {
-        "name": "412",
-        "$kuid": "NHG1ninty",
-        "label": [
-          "Cuidado - 412 - Cuidado temporal de salud a miembros del hogar de 0 a 14 años"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "412"
-      },
-      {
-        "name": "413",
-        "$kuid": "jjNfP66E9",
-        "label": [
-          "Cuidado - 413 - Apoyo escolar a miembros del hogar de 0 a 14 años"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "413"
-      },
-      {
-        "name": "414",
-        "$kuid": "fRQSiEHBq",
-        "label": [
-          "Cuidado - 414 - Acompañamiento y traslado de miembros del hogar de 0 a 14 años"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "414"
-      },
-      {
-        "name": "415",
-        "$kuid": "vSyvKgJzp",
-        "label": [
-          "Cuidado - 415 - Acompañamiento y traslado de miembros del hogar de 15 a 17 años"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "415"
-      },
-      {
-        "name": "421",
-        "$kuid": "9JoRNW8eF",
-        "label": [
-          "Cuidado - 421 - Cuidado permanente y apoyo a miembros del hogar que requieren cuidados especiales"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "421"
-      },
-      {
-        "name": "422",
-        "$kuid": "OMSscnhPd",
-        "label": [
-          "Cuidado - 422 - Cuidado temporal de salud a miembros del hogar que requieren cuidados especiales"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "422"
-      },
-      {
-        "name": "423",
-        "$kuid": "aN3myMK1g",
-        "label": [
-          "Cuidado - 423 - Acompañamiento y traslado a miembros del hogar que requieren cuidados especiales"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "423"
-      },
-      {
-        "name": "429",
-        "$kuid": "GvwZOhUGu",
-        "label": [
-          "Cuidado - 429 - Otras actividades de cuidado y apoyo a miembros del hogar que requieren cuidados especiales"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "429"
-      },
-      {
-        "name": "431",
-        "$kuid": "W1f8dWkiR",
-        "label": [
-          "Cuidado - 431 - Cuidado permanente y apoyo a miembros del hogar de 65 años y más"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "431"
-      },
-      {
-        "name": "432",
-        "$kuid": "ct9A4kFwL",
-        "label": [
-          "Cuidado - 432 - Cuidado temporal de salud a miembros del hogar de 65 años y más"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "432"
-      },
-      {
-        "name": "433",
-        "$kuid": "tYhhsQp6Z",
-        "label": [
-          "Cuidado - 433 - Acompañamiento y traslado a miembros del hogar de 65 años y más"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "433"
-      },
-      {
-        "name": "439",
-        "$kuid": "pr4UUwUZk",
-        "label": [
-          "Cuidado - 439 - Otras actividades de cuidado y apoyo a miembros del hogar de 65 años y más"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "439"
-      },
-      {
-        "name": "441",
-        "$kuid": "fH3sZACM6",
-        "label": [
-          "Cuidado - 441 - Cuidado permanente y apoyo a miembros del hogar con enfermedad, discapacidad o dependencia"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "441"
-      },
-      {
-        "name": "442",
-        "$kuid": "jt5aN8BnD",
-        "label": [
-          "Cuidado - 442 - Cuidado de salud a miembros del hogar con discapacidad"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "442"
-      },
-      {
-        "name": "443",
-        "$kuid": "LMIFCqkIK",
-        "label": [
-          "Cuidado - 443 - Acompañamiento y traslado a algún lugar a miembros del hogar con discapacidad"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "443"
-      },
-      {
-        "name": "449",
-        "$kuid": "cwpjdKVQg",
-        "label": [
-          "Cuidado - 449 - Otras actividades de cuidado a miembros del hogar con discapacidad"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "449"
-      },
-      {
-        "name": "31",
-        "$kuid": "ESjdjDir2",
-        "label": [
-          "Domésticas - 31 - Preparar y servir la comida"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "31"
-      },
-      {
-        "name": "32",
-        "$kuid": "IqUrgu72X",
-        "label": [
-          "Domésticas - 32 - Limpiar la vivienda"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "32"
-      },
-      {
-        "name": "33",
-        "$kuid": "YGSwBvUYH",
-        "label": [
-          "Domésticas - 33 - Lavar, planchar o arreglar la ropa/calzado"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "33"
-      },
-      {
-        "name": "34",
-        "$kuid": "VVTClmpqX",
-        "label": [
-          "Domésticas - 34 - Reparar y mantener la vivienda o los bienes del hogar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "34"
-      },
-      {
-        "name": "35",
-        "$kuid": "XsfvTX2Sd",
-        "label": [
-          "Domésticas - 35 - Hacer pago y trámites del hogar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "35"
-      },
-      {
-        "name": "36",
-        "$kuid": "VFmrV6Qmv",
-        "label": [
-          "Domésticas - 36 - Hacer compras para el hogar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "36"
-      },
-      {
-        "name": "37",
-        "$kuid": "KeQEinlQx",
-        "label": [
-          "Domésticas - 37 - Cuidar mascotas y plantas"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "37"
-      },
-      {
-        "name": "511",
-        "$kuid": "AajUtkEGY",
-        "label": [
-          "Personal - 511 - Higienizarse o arreglarse"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "511"
-      },
-      {
-        "name": "512",
-        "$kuid": "wCygqesRV",
-        "label": [
-          "Personal - 512 - Cuidar su salud o hacer terapias y tratamientos"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "512"
-      },
-      {
-        "name": "514",
-        "$kuid": "IkS0FzYJ1",
-        "label": [
-          "Personal - 514 - Viajar para cuidar su salud"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "514"
-      },
-      {
-        "name": "521",
-        "$kuid": "FvWruSIpU",
-        "label": [
-          "Personal - 521 - Comer y beber"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "521"
-      },
-      {
-        "name": "522",
-        "$kuid": "jTnGpjrZp",
-        "label": [
-          "Personal - 522 - Dormir"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "522"
-      },
-      {
-        "name": "523",
-        "$kuid": "dPMCKFouZ",
-        "label": [
-          "Personal - 523 - Descansar, rezar o meditar y otras actividades personales"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "523"
-      },
-      {
-        "name": "61",
-        "$kuid": "XS8JIdY1j",
-        "label": [
-          "Personal - 61 - Estudiar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "61"
-      },
-      {
-        "name": "62",
-        "$kuid": "MzVzf09bw",
-        "label": [
-          "Personal - 62 - Viajar para estudiar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "62"
-      },
-      {
-        "name": "711",
-        "$kuid": "G9pEo9EB0",
-        "label": [
-          "Ocio - 711 - Recurrir con familiares o amigos"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "711"
-      },
-      {
-        "name": "712",
-        "$kuid": "z1s2VeMZJ",
-        "label": [
-          "Ocio - 712 - Participar de celebraciones comunitarias, políticas o religiosas"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "712"
-      },
-      {
-        "name": "72",
-        "$kuid": "ffzmefXbA",
-        "label": [
-          "Ocio - 72 - Asistir a eventos o espectáculos"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "72"
-      },
-      {
-        "name": "73",
-        "$kuid": "gYirAiAaR",
-        "label": [
-          "Ocio - 73 - Realizar actividades artísticas, juegos o entretenimientos"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "73"
-      },
-      {
-        "name": "74",
-        "$kuid": "iLgCoPg6y",
-        "label": [
-          "Ocio - 74 - Hacer deportes o ejercicio físico"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "74"
-      },
-      {
-        "name": "81",
-        "$kuid": "gUCgpyR4U",
-        "label": [
-          "Ocio - 81 - Ver libros o revistas"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "81"
-      },
-      {
-        "name": "82",
-        "$kuid": "cGHGHLfSs",
-        "label": [
-          "Ocio - 82 - Ver televisión, videos o transmisiones en vivo"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "82"
-      },
-      {
-        "name": "83",
-        "$kuid": "tPGHNRqbn",
-        "label": [
-          "Ocio - 83 - Escuchar música o radio"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "83"
-      },
-      {
-        "name": "84",
-        "$kuid": "ROMK6TZs7",
-        "label": [
-          "Ocio - 84 - Usar computadora o tableta"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "84"
-      },
-      {
-        "name": "85",
-        "$kuid": "Xs3wxy6Ia",
-        "label": [
-          "Ocio - 85 - Usar el celular"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "85"
-      },
-      {
-        "name": "52",
-        "$kuid": "B511Vd1OI",
-        "label": [
-          "Voluntarias - 52 - Hacer trabajo voluntario para la comunidad"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "52"
-      },
-      {
-        "name": "53",
-        "$kuid": "l1mfZbrqY",
-        "label": [
-          "Voluntarias - 53 - Hacer trabajo voluntario en instituciones sin fines de lucro"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "53"
-      },
-      {
-        "name": "54",
-        "$kuid": "1K8ctj7AH",
-        "label": [
-          "Voluntarias - 54 - Ayudar a otros hogares familiares sin pago"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "54"
-      },
-      {
-        "name": "55",
-        "$kuid": "rouz9Tl8N",
-        "label": [
-          "Voluntarias - 55 - Ayudar a otros hogares no familiares sin pago"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "55"
-      },
-      {
-        "name": "999",
-        "$kuid": "5o0x426xw",
-        "label": [
-          "Sin clasificar - 999 - Otras actividades sin clasificar"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "999"
-      },
-      {
-        "name": "0",
-        "$kuid": "RLBP2kEnJ",
-        "label": [
-          "Ninguna - 000 - Ninguna"
-        ],
-        "list_name": "actividades",
-        "$autovalue": "0"
       }
     ],
     "settings": {
       "style": "pages",
       "version": "v1",
-      "id_string": "EUT_TEST_2",
+      "id_string": "simple",
       "default_language": "es"
     },
     "translated": [
@@ -4124,30 +606,30 @@
   "downloads": [
     {
       "format": "xls",
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG.xls"
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ.xls"
     },
     {
       "format": "xml",
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG.xml"
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ.xml"
     }
   ],
   "embeds": [
     {
       "format": "xls",
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/xls/"
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/xls/"
     },
     {
       "format": "xform",
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/xform/"
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/xform/"
     }
   ],
-  "xform_link": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/xform/",
-  "hooks_link": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/hooks/",
+  "xform_link": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/xform/",
+  "hooks_link": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/hooks/",
   "tag_string": "",
-  "uid": "a5NSCkEEVQvWrrkifBDtPG",
+  "uid": "aYiEMb38mgpDwkY3E5WvQZ",
   "kind": "asset",
-  "xls_link": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/xls/",
-  "name": "EUT_TEST_2",
+  "xls_link": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/xls/",
+  "name": "simple",
   "assignable_permissions": [
     {
       "url": "https://kf.kobotoolbox.org/api/v2/permissions/view_asset/",
@@ -4194,67 +676,67 @@
   ],
   "permissions": [
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pmdwfRFHaHW8D7AqEiWmUU/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/p9dsUa6Wft4MambXABoivZ/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/add_submissions.json",
       "label": "Add submissions"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pS3NzRXAed56mWYVjryGCS/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pKDvnXrPqF6vbLoKxZc6EW/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/change_asset.json",
       "label": "Edit form"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pnRPU9Sx7GBCXHNR7VtDrp/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pAi7s2ybeoXZWfLCf2spkc/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/change_submissions.json",
       "label": "Edit submissions"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pXBrioBnsBEqPeggP5bHy5/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pRQGfkxyzQXt4KiXQqMWxH/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/delete_submissions.json",
       "label": "Delete submissions"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pay3jqdXd8sX4Fqcybrk7K/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pu96FM9Fr5vUgkHCsGGj6Z/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/manage_asset.json",
       "label": "Manage project"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pbAuJ4PHYP86kyPWDd9WEZ/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pYc8kKR4HKUctYZdCmARGs/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/validate_submissions.json",
       "label": "Validate submissions"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pvVWwy6Cq89a2h5b2rAmYQ/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pA9fsHA7ZugPkFebpKubjJ/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/view_asset.json",
       "label": "View form"
     },
     {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pLZqAcrCK5XJtgNfhMBPMk/",
+      "url": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/permission-assignments/pSJKet4RSwRRH8nuHXrK6j/",
       "user": "https://kf.kobotoolbox.org/api/v2/users/observatoriovillero.json",
       "permission": "https://kf.kobotoolbox.org/api/v2/permissions/view_submissions.json",
       "label": "View submissions"
-    },
-    {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pudTUhwBzEWEA4qdCURvJC/",
-      "user": "https://kf.kobotoolbox.org/api/v2/users/relevador_observatoriovillero.json",
-      "permission": "https://kf.kobotoolbox.org/api/v2/permissions/add_submissions.json",
-      "label": "Add submissions"
-    },
-    {
-      "url": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/permission-assignments/pmKNirT3nKnJvBKGPmjz2K/",
-      "user": "https://kf.kobotoolbox.org/api/v2/users/relevador_observatoriovillero.json",
-      "permission": "https://kf.kobotoolbox.org/api/v2/permissions/view_asset.json",
-      "label": "View form"
     }
   ],
   "effective_permissions": [
+    {
+      "codename": "delete_asset"
+    },
+    {
+      "codename": "view_submissions"
+    },
+    {
+      "codename": "view_asset"
+    },
+    {
+      "codename": "delete_submissions"
+    },
     {
       "codename": "change_submissions"
     },
@@ -4262,19 +744,7 @@
       "codename": "manage_asset"
     },
     {
-      "codename": "view_submissions"
-    },
-    {
-      "codename": "delete_submissions"
-    },
-    {
       "codename": "add_submissions"
-    },
-    {
-      "codename": "delete_asset"
-    },
-    {
-      "codename": "view_asset"
     },
     {
       "codename": "validate_submissions"
@@ -4283,17 +753,17 @@
       "codename": "change_asset"
     }
   ],
-  "exports": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/exports/",
+  "exports": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/exports/",
   "export_settings": [],
-  "data": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/data.json",
+  "data": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/data.json",
   "children": {
     "count": 0
   },
   "subscribers_count": 0,
-  "status": "shared",
+  "status": "private",
   "access_types": null,
   "data_sharing": {},
-  "paired_data": "https://kf.kobotoolbox.org/api/v2/assets/a5NSCkEEVQvWrrkifBDtPG/paired-data/",
+  "paired_data": "https://kf.kobotoolbox.org/api/v2/assets/aYiEMb38mgpDwkY3E5WvQZ/paired-data/",
   "project_ownership": null,
   "owner_label": "observatoriovillero"
 }
